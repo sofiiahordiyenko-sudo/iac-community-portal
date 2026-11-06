@@ -24,6 +24,9 @@
       flex-shrink: 0;
     }
     #sc-label { font-weight: 700; color: #fff; }
+    /* Selected indicator, appended to the blue bar in bold caps */
+    #sc-indicator { font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 0.02em; }
+    #sc-indicator:empty { display: none; }
     #zip-count { color: rgba(255,255,255,0.6); }
     #info-hint {
       margin-left: auto; font-style: italic;
@@ -89,21 +92,45 @@
       text-align: center; text-decoration: none; font-family: inherit;
     }
     .ctrl-btn-wide:hover { background: rgba(255,255,255,0.28); }
-    #ctrl-back-link { margin-top: auto; background: rgba(0,0,0,0.2); }
 
-    .ctrl-select-label {
-      font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.85);
-      margin-top: 4px; margin-bottom: -2px;
+    /* Panel sections: LEGEND / CONTROLS / VIEW STATISTICS */
+    .ctrl-section-label {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
+      text-transform: uppercase; color: rgba(255,255,255,0.7);
+      margin-top: 4px; margin-bottom: -4px;
     }
-    .ctrl-select {
-      display: block; width: 100%; box-sizing: border-box;
-      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35); border-radius: 6px;
-      padding: 7px 8px; font-size: 12px; font-weight: 700; color: #fff; cursor: pointer;
-      font-family: inherit;
+    /* Fixed-size legend area: swapping legends never moves the controls below */
+    #ctrl-legend-area {
+      height: 150px; flex-shrink: 0; overflow-y: auto;
+      background: rgba(0,0,0,0.14); border-radius: 6px; padding: 8px;
     }
-    .ctrl-select:hover { background: rgba(255,255,255,0.28); }
-    .ctrl-select option { color: #1a1a1a; }
-    .ctrl-select optgroup { color: #1a1a1a; }
+    .legend-range { margin-left: auto; color: rgba(255,255,255,0.6); font-size: 10px; white-space: nowrap; }
+    #ctrl-legend-note { font-size: 10px; color: rgba(255,255,255,0.75); line-height: 1.35; }
+    .ctrl-pair-caption { font-size: 10px; color: rgba(255,255,255,0.7); margin-bottom: -6px; }
+    .ctrl-pair { display: flex; gap: 6px; }
+    .ctrl-pair .ctrl-btn-wide { flex: 1; padding: 7px 4px; }
+    .ctrl-btn-wide.active { background: #fff; color: #1e5c39; border-color: #fff; }
+
+    /* VIEW STATISTICS: components list, replaced in the same space by
+       the chosen component's indicators */
+    #ctrl-stats-heading { font-size: 11px; font-weight: 800; color: #fff; margin-bottom: -4px; }
+    #ctrl-stats-area {
+      flex: 1 0 180px; overflow-y: auto;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .stats-item {
+      display: flex; align-items: center; gap: 6px; width: 100%;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 6px; padding: 6px 8px;
+      font-size: 11.5px; font-weight: 600; color: #fff; text-align: left;
+      cursor: pointer; font-family: inherit; line-height: 1.25;
+    }
+    .stats-item:hover:not([disabled]) { background: rgba(255,255,255,0.28); }
+    .stats-item[disabled] { opacity: 0.5; cursor: default; }
+    .stats-item.active, .stats-item.active:hover:not([disabled]) { background: #fff; color: #1e5c39; font-weight: 800; }
+    .stats-item .stats-meta { margin-left: auto; font-size: 10px; font-weight: 400; opacity: 0.8; white-space: nowrap; }
+    #ctrl-back-components { background: rgba(0,0,0,0.2); }
+
     #ctrl-indicator-meta { font-size: 10px; color: rgba(255,255,255,0.75); line-height: 1.35; }
 
     .pie-marker-wrap { display:flex; flex-direction:column; align-items:center; pointer-events:auto; }
@@ -159,6 +186,7 @@
 <!-- INFO BAR -->
 <div id="info-bar">
   <span id="sc-label">Loading...</span>
+  <span id="sc-indicator"></span>
   <span id="zip-count"></span>
   <span id="info-hint">Click any community to view its profile · Adjoining centers outlined</span>
 </div>
@@ -170,88 +198,96 @@
     <div id="ctrl-title">Loading...</div>
     <div id="ctrl-zip-count"></div>
 
-    <div id="ctrl-legend-default" class="ctrl-legend">
-      <div class="legend-row">
-        <div class="legend-box" style="background:#2e7d4f;"></div>
-        <span>Selected Community</span>
+    <!-- LEGEND: one fixed area; only its contents change -->
+    <div class="ctrl-section-label">Legend</div>
+    <div id="ctrl-legend-area">
+      <div id="ctrl-legend-default" class="ctrl-legend">
+        <div class="legend-row">
+          <div class="legend-box" style="background:#2e7d4f;"></div>
+          <span>Selected Community</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-box" style="background:#4a90d9;"></div>
+          <span>Community Area</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-box" style="background:transparent;border-color:#004a99;border-style:dashed;"></div>
+          <span>Adjoining SC</span>
+        </div>
       </div>
-      <div class="legend-row">
-        <div class="legend-box" style="background:#4a90d9;"></div>
-        <span>Community Area</span>
+
+      <!-- Score bands match SCALE_COLORS: 1 | 2-4 | 5-6 | 7-9 | 10 -->
+      <div id="ctrl-legend-scale" class="ctrl-legend" style="display:none;">
+        <div class="legend-row">
+          <div class="legend-box" style="background:#7f1d1d;"></div>
+          <span id="legend-label-1"></span><span class="legend-range">1</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-box" style="background:#e05252;"></div>
+          <span id="legend-label-2"></span><span class="legend-range">2–4</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-box" style="background:#e8c34a;"></div>
+          <span id="legend-label-3"></span><span class="legend-range">5–6</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-box" style="background:#5bbf6a;"></div>
+          <span id="legend-label-4"></span><span class="legend-range">7–9</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-box" style="background:#15803d;"></div>
+          <span id="legend-label-5"></span><span class="legend-range">10</span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-box" style="background:#9ca3af;"></div>
+          <span>No data</span>
+        </div>
+        <!-- "Scored for the whole Community" for community-level indicators -->
+        <div id="ctrl-legend-note" style="display:none;"></div>
+        <!-- Source / year line — filled only for Indicator Master indicators -->
+        <div id="ctrl-indicator-meta" style="display:none;"></div>
       </div>
-      <div class="legend-row">
-        <div class="legend-box" style="background:transparent;border-color:#004a99;border-style:dashed;"></div>
-        <span>Adjoining SC</span>
+
+      <div id="ctrl-legend-landform" class="ctrl-legend" style="display:none;">
+        <!-- populated dynamically from LANDFORM_COLORS -->
+      </div>
+
+      <div id="ctrl-legend-pie" class="ctrl-legend" style="display:none;">
+        <b>Community Profile</b>
+        <div class="legend-row"><div class="legend-box" style="background:#c0392b;"></div><span>Top — Economy</span></div>
+        <div class="legend-row"><div class="legend-box" style="background:#4a90d9;"></div><span>Right — Role</span></div>
+        <div class="legend-row"><div class="legend-box" style="background:#5ab870;"></div><span>Left — Identity</span></div>
+        <div class="legend-row"><div class="legend-box" style="background:#333333;opacity:0.6;"></div><span>Ring — Border Scale</span></div>
       </div>
     </div>
 
-    <div id="ctrl-legend-scale" class="ctrl-legend" style="display:none;">
-      <div class="legend-row">
-        <div class="legend-box" style="background:#7f1d1d;"></div>
-        <span id="legend-label-1"></span>
-      </div>
-      <div class="legend-row">
-        <div class="legend-box" style="background:#e05252;"></div>
-        <span id="legend-label-2"></span>
-      </div>
-      <div class="legend-row">
-        <div class="legend-box" style="background:#e8c34a;"></div>
-        <span id="legend-label-3"></span>
-      </div>
-      <div class="legend-row">
-        <div class="legend-box" style="background:#5bbf6a;"></div>
-        <span id="legend-label-4"></span>
-      </div>
-      <div class="legend-row">
-        <div class="legend-box" style="background:#15803d;"></div>
-        <span id="legend-label-5"></span>
-      </div>
-      <div class="legend-row">
-        <div class="legend-box" style="background:#9ca3af;"></div>
-        <span>No data</span>
-      </div>
-      <!-- Source / year line — filled only for Indicator Master indicators -->
-      <div id="ctrl-indicator-meta" style="display:none;"></div>
-    </div>
-
-    <div id="ctrl-legend-landform" class="ctrl-legend" style="display:none;">
-      <!-- populated dynamically from LANDFORM_COLORS -->
-    </div>
-
-    <div id="ctrl-legend-pie" class="ctrl-legend" style="display:none;">
-      <b>Community Profile</b>
-      <div class="legend-row"><div class="legend-box" style="background:#c0392b;"></div><span>Top — Economy</span></div>
-      <div class="legend-row"><div class="legend-box" style="background:#4a90d9;"></div><span>Right — Role</span></div>
-      <div class="legend-row"><div class="legend-box" style="background:#5ab870;"></div><span>Left — Identity</span></div>
-      <div class="legend-row"><div class="legend-box" style="background:#333333;opacity:0.6;"></div><span>Ring — Border Scale</span></div>
-    </div>
-
-    <div class="ctrl-divider"></div>
-
+    <!-- CONTROLS -->
+    <div class="ctrl-section-label">Controls</div>
     <div class="ctrl-zoom-row">
       <button id="ctrl-zoom-in" class="ctrl-btn" title="Zoom in">+</button>
       <button id="ctrl-zoom-out" class="ctrl-btn" title="Zoom out">−</button>
     </div>
-    <button id="ctrl-fill-toggle" class="ctrl-btn-wide">Outline View</button>
-    <button id="ctrl-basemap-toggle" class="ctrl-btn-wide">Satellite View</button>
-    <label for="ctrl-indicator-select" class="ctrl-select-label">View Indicator</label>
-    <select id="ctrl-indicator-select" class="ctrl-select">
-      <option value="none">Community View</option>
-      <option value="pop_change">Population Change</option>
-      <option value="pop_balance">Population Balance</option>
-      <option value="pop_size">Population Size</option>
-      <option value="lfpr">Labor Force Participation</option>
-      <option value="income">Median Household Income</option>
-      <option value="unemployment">Unemployment Rate</option>
-      <option value="poverty">Poverty Rate</option>
-      <option value="landform">Dominant Landform</option>
-    </select>
-    <button id="ctrl-pie-toggle" class="ctrl-btn-wide">Show Community Profile</button>
+    <div class="ctrl-pair-caption">Back to</div>
+    <div class="ctrl-pair">
+      <a id="ctrl-lens-link" class="ctrl-btn-wide" href="#" title="Back to this Community's Lens page">LENS</a>
+      <a id="ctrl-iac-link" class="ctrl-btn-wide" href="../iac_map.html" title="Back to the IAC map">IAC</a>
+    </div>
+    <div class="ctrl-pair-caption">Map style</div>
+    <div class="ctrl-pair">
+      <button id="ctrl-fill-toggle" class="ctrl-btn-wide" aria-pressed="false" title="Show community outlines only">Outline</button>
+      <button id="ctrl-basemap-toggle" class="ctrl-btn-wide" aria-pressed="false" title="Switch to satellite imagery">Satellite</button>
+    </div>
 
-    <a id="ctrl-back-link" class="ctrl-btn-wide" href="#">← Back to the Community Page</a>
+    <!-- VIEW STATISTICS: 7 components -> that component's indicators, same space -->
+    <div class="ctrl-section-label">View Statistics</div>
     <a id="ctrl-profile-link" class="ctrl-btn-wide" href="#" target="_blank">Community Profile</a>
-    <a id="ctrl-home-link" class="ctrl-btn-wide" href="../iac_home.html">Back to Home Page</a>
-    <a id="ctrl-find-link" class="ctrl-btn-wide" href="../iac_map.html">Find Your Community</a>
+    <div id="ctrl-stats-heading"></div>
+    <div id="ctrl-stats-area"></div>
+    <button id="ctrl-back-components" class="ctrl-btn-wide" style="display:none;">← Back to Components</button>
+
+    <!-- Saved, not shown: the pie-chart toggle belongs on higher-level maps
+         only (per John's Selector review). Set SHOW_PIE_TOGGLE = true to restore. -->
+    <button id="ctrl-pie-toggle" class="ctrl-btn-wide" style="display:none;">Show Community Profile</button>
   </div>
 </div>
 
@@ -353,18 +389,15 @@ function masterScoreColor(zip, scid, indicatorKey) {
   return SCALE_COLORS[indicatorStore.score(cfg.masterId, geoId)] || SCALE_NO_DATA;
 }
 
-function addMasterIndicatorOptions(select) {
-  if (!indicatorStore) return;
-  indicatorStore.selectorEntries().forEach(({ component, entries }) => {
-    const group = document.createElement('optgroup');
-    group.label = component.name;
+// Register every selectable Indicator Master indicator in INDICATOR_CONFIG,
+// so the existing legend/title/colour code works for it unchanged.
+function registerMasterIndicators() {
+  if (!indicatorStore) return {};
+  const status = {};
+  indicatorStore.selectorEntries().forEach(({ entries }) => {
     entries.forEach(e => {
-      if (INDICATOR_CONFIG[e.id]) return;   // never shadow an existing option
-      const opt = document.createElement('option');
-      opt.value = e.id;
-      opt.textContent = e.enabled ? e.label : `${e.label} (${e.reason})`;
-      opt.disabled = !e.enabled;
-      group.appendChild(opt);
+      status[e.id] = { enabled: e.enabled, reason: e.reason };
+      if (INDICATOR_CONFIG[e.id]) return;   // never shadow an existing view
       INDICATOR_CONFIG[e.id] = {
         masterId: e.id,
         legend: e.legend || ['Lowest', 'Below average', '', 'Above average', 'Highest'],
@@ -372,9 +405,67 @@ function addMasterIndicatorOptions(select) {
         communityLevel: e.geoLevel === 'service_center'
       };
     });
-    if (group.children.length) select.appendChild(group);
   });
+  return status;
 }
+
+// ── VIEW STATISTICS structure ────────────────────────────────
+// [{ id, name, items: [{ key, label, enabled, reason }] }]
+// Built from the Indicator Master: the 7 Top-10 components in display order,
+// then "Population & Land" (the existing Lens views: Population Change,
+// Balance, Size, Dominant Landform). Every indicator of a component is listed
+// so the full structure is visible; ones without data are shown disabled.
+// Legacy views keep their original keys (income, pop_change, landform, …),
+// so ?indicator= / ?pop=1 deep links keep working.
+const FALLBACK_STAT_GROUPS = [
+  { id: 'economy', name: 'Economy', items: [
+    { key: 'income',       label: 'Median Household Income',   enabled: true },
+    { key: 'poverty',      label: 'Poverty Rate',              enabled: true },
+    { key: 'unemployment', label: 'Unemployment Rate',         enabled: true },
+    { key: 'lfpr',         label: 'Labor Force Participation', enabled: true } ] },
+  { id: 'population_land', name: 'Population & Land', items: [
+    { key: 'pop_change',  label: 'Population Change',  enabled: true },
+    { key: 'pop_balance', label: 'Population Balance', enabled: true },
+    { key: 'pop_size',    label: 'Population Size',    enabled: true },
+    { key: 'landform',    label: 'Dominant Landform',  enabled: true } ] }
+];
+
+function buildStatGroups() {
+  if (!indicatorStore) return FALLBACK_STAT_GROUPS;   // Master missing → built-in views only
+  const status = registerMasterIndicators();
+  const all = indicatorStore.master.indicators || [];
+  return indicatorStore.components().map(comp => {
+    const items = all
+      .filter(ind => ind.component_id === comp.id && ind.level === 'indicator')
+      .sort((a, b) => (a.priority_rank || 99) - (b.priority_rank || 99))
+      .map(ind => {
+        const b = ind.binding || {};
+        const label = ind.short_label || ind.name;
+        if (b.type && b.type.indexOf('legacy') === 0 && b.selector_key) {
+          const key = b.selector_key;
+          const known = key === 'landform' || !!INDICATOR_CONFIG[key];
+          return { key, label, enabled: known, reason: known ? null : 'not available' };
+        }
+        const st = status[ind.id];
+        if (st) return { key: ind.id, label, enabled: st.enabled, reason: st.reason };
+        return { key: ind.id, label, enabled: false, reason: ind.status === 'planned' ? 'planned' : 'data pending' };
+      });
+    const name = comp.id === 'population_land' ? 'Population & Land' : comp.name;
+    return { id: comp.id, name, items };
+  }).filter(g => g.items.length > 0);
+}
+
+// Display name of a view, for the blue bar ("ST CLOUD SERVICE CENTER — POPULATION CHANGE")
+function indicatorDisplayName(key, groups) {
+  for (const g of groups) {
+    const it = g.items.find(i => i.key === key);
+    if (it) return it.label;
+  }
+  if (key === 'landform') return 'Dominant Landform';
+  return (INDICATOR_CONFIG[key]?.title || '').replace(/ View$/, '');
+}
+
+const SHOW_PIE_TOGGLE = false;   // Community Profile pie chart: saved for higher-level maps
 
 function landformColor(zip) {
   const landform = zipPopChange[zip]?.dominant_landform;
@@ -537,38 +628,106 @@ function initMap(SC_DATA) {
   );
 
   // ── Main map (Map 2) ────────────────────────────────────────
-  const map = L.map('map', { zoomControl: false });
+  // Zoom limits are fixed on the map itself, so swapping basemap layers can
+  // never make Leaflet recompute them (and re-zoom) mid-toggle.
+  const map = L.map('map', { zoomControl: false, minZoom: 3, maxZoom: 18 });
   streets.addTo(map);
 
   // ── Basemap toggle ──────────────────────────────────────────
+  // Fix (Selector review): switching to Satellite changed the scale of the
+  // community map. The view is now captured before the swap and restored
+  // after it, and the new layer is added before the old one is removed, so
+  // the map is never left without a tile layer.
   let satelliteMode = false;
   function toggleBasemap(btn) {
+    const center = map.getCenter(), zoom = map.getZoom();
     satelliteMode = !satelliteMode;
-    if (satelliteMode) {
-      map.removeLayer(streets);
-      satellite.addTo(map);
-      btn.textContent = 'Streets View';
-    } else {
-      map.removeLayer(satellite);
-      streets.addTo(map);
-      btn.textContent = 'Satellite View';
-    }
+    const show = satelliteMode ? satellite : streets;
+    const hide = satelliteMode ? streets : satellite;
+    show.addTo(map);
+    map.removeLayer(hide);
+    map.setView(center, zoom, { animate: false });
+    btn.classList.toggle('active', satelliteMode);
+    btn.setAttribute('aria-pressed', String(satelliteMode));
   }
 
   // ── Fill/Outline state ───────────────────────────────────────
   let hollowMode = false;
   function toggleOutline(btn) {
     hollowMode = !hollowMode;
-    btn.textContent = hollowMode ? 'Filled View' : 'Outline View';
+    btn.classList.toggle('active', hollowMode);
+    btn.setAttribute('aria-pressed', String(hollowMode));
     trackedLayers.forEach(({ layer, zip, isSelected }) => {
       layer.setStyle(styleFor(zip, isSelected, hollowMode));
     });
   }
 
+  // ── VIEW STATISTICS: components → indicators, in the same space ──
+  const statGroups = buildStatGroups();
+  let currentComponent = null;   // null = showing the component list
+
+  function renderStats() {
+    const area    = document.getElementById('ctrl-stats-area');
+    const heading = document.getElementById('ctrl-stats-heading');
+    const back    = document.getElementById('ctrl-back-components');
+    area.innerHTML = '';
+    const group = statGroups.find(g => g.id === currentComponent);
+
+    if (!group) {
+      heading.textContent = 'Components';
+      back.style.display = 'none';
+      statGroups.forEach(g => {
+        const live = g.items.filter(i => i.enabled).length;
+        const btn = document.createElement('button');
+        btn.className = 'stats-item';
+        btn.innerHTML = `<span></span><span class="stats-meta"></span>`;
+        btn.children[0].textContent = g.name;
+        btn.children[1].textContent = `${live}/${g.items.length}`;
+        btn.title = `${live} of ${g.items.length} indicators have data`;
+        btn.addEventListener('click', () => { currentComponent = g.id; renderStats(); });
+        area.appendChild(btn);
+      });
+      return;
+    }
+
+    heading.textContent = group.name;
+    back.style.display = 'block';
+    group.items.forEach(item => {
+      const btn = document.createElement('button');
+      btn.className = 'stats-item' + (item.key === currentIndicator ? ' active' : '');
+      btn.innerHTML = `<span></span>`;
+      btn.children[0].textContent = item.label;
+      if (!item.enabled) {
+        btn.disabled = true;
+        const meta = document.createElement('span');
+        meta.className = 'stats-meta';
+        meta.textContent = item.reason || 'data pending';
+        btn.appendChild(meta);
+      } else {
+        btn.addEventListener('click', () => applyIndicator(item.key));
+      }
+      area.appendChild(btn);
+    });
+  }
+
+  function backToComponents() {
+    currentComponent = null;
+    applyIndicator('none');
+  }
+
+  // Select a view by key from a deep link: open its component, then apply it.
+  function selectIndicatorByKey(key) {
+    const group = statGroups.find(g => g.items.some(i => i.key === key && i.enabled));
+    if (!group) return false;
+    currentComponent = group.id;
+    applyIndicator(key);
+    return true;
+  }
+
   // ── Indicator view state ────────────────────────────────────
   let currentIndicator = 'none';
-  function handleIndicatorChange(select) {
-    currentIndicator = select.value;
+  function applyIndicator(key) {
+    currentIndicator = key;
     const isActive = currentIndicator !== 'none';
 
     document.getElementById('ctrl-legend-default').style.display = isActive ? 'none' : 'flex';
@@ -593,8 +752,18 @@ function initMap(SC_DATA) {
     metaEl.textContent = masterId && indicatorStore ? indicatorStore.provenance(masterId) : '';
     metaEl.style.display = metaEl.textContent ? 'block' : 'none';
 
-    document.getElementById('ctrl-title').textContent =
-      scShortName + ' — ' + (isActive ? INDICATOR_CONFIG[currentIndicator]?.title || 'Dominant Landform View' : modeLabel);
+    const noteEl = document.getElementById('ctrl-legend-note');
+    const communityLevel = isActive && currentIndicator !== 'landform' &&
+      (COMMUNITY_LEVEL_INDICATORS.has(currentIndicator) || INDICATOR_CONFIG[currentIndicator]?.communityLevel);
+    noteEl.textContent = communityLevel ? 'Scored once for the whole Community — every area shares one colour.' : '';
+    noteEl.style.display = noteEl.textContent ? 'block' : 'none';
+
+    // Blue bar: "St Cloud Service Center — POPULATION CHANGE" (bold caps via CSS)
+    document.getElementById('sc-label').textContent = isActive ? sc.name : sc.name + ' · ' + modeLabel;
+    document.getElementById('sc-indicator').textContent =
+      isActive ? '— ' + indicatorDisplayName(currentIndicator, statGroups) : '';
+
+    renderStats();
 
     trackedLayers.forEach(({ layer, zip, isSelected }) => {
       layer.setStyle(styleFor(zip, isSelected, hollowMode));
@@ -629,15 +798,17 @@ function initMap(SC_DATA) {
   document.getElementById('ctrl-title').textContent = scShortName + ' — ' + modeLabel;
   document.getElementById('ctrl-zip-count').textContent =
     `${sc.zips.length} community area${sc.zips.length !== 1 ? 's' : ''}`;
-  document.getElementById('ctrl-back-link').href = portalUrl;
+  document.getElementById('ctrl-lens-link').href = portalUrl;
   document.getElementById('ctrl-profile-link').href = `../community-profile.html?scid=${scid}&zip=${selectedZip}`;
   document.getElementById('ctrl-zoom-in').addEventListener('click', () => map.zoomIn());
   document.getElementById('ctrl-zoom-out').addEventListener('click', () => map.zoomOut());
   document.getElementById('ctrl-fill-toggle').addEventListener('click', (e) => toggleOutline(e.currentTarget));
   document.getElementById('ctrl-basemap-toggle').addEventListener('click', (e) => toggleBasemap(e.currentTarget));
-  addMasterIndicatorOptions(document.getElementById('ctrl-indicator-select'));
-  document.getElementById('ctrl-indicator-select').addEventListener('change', (e) => handleIndicatorChange(e.currentTarget));
-  document.getElementById('ctrl-pie-toggle').addEventListener('click', (e) => togglePieChart(e.currentTarget));
+  document.getElementById('ctrl-back-components').addEventListener('click', backToComponents);
+  const pieBtn = document.getElementById('ctrl-pie-toggle');
+  pieBtn.style.display = SHOW_PIE_TOGGLE ? 'block' : 'none';
+  pieBtn.addEventListener('click', (e) => togglePieChart(e.currentTarget));
+  renderStats();
 
   // ── Style helpers ───────────────────────────────────────────
   function styleFor(zip, isSelected, hollow) {
@@ -788,18 +959,14 @@ function initMap(SC_DATA) {
       updateLabelSizes();
 
       if (startInPopChangeView) {
-        const select = document.getElementById('ctrl-indicator-select');
-        select.value = 'pop_change';
-        handleIndicatorChange(select);
+        selectIndicatorByKey('pop_change');
       }
 
-      // Deep link to any enabled indicator: ?indicator=<option value>
+      // Deep link to any enabled indicator: ?indicator=<key>
       // (e.g. income, or an Indicator Master id such as edu_bachelors_degree_or_higher)
       const startIndicator = params.get('indicator');
       if (startIndicator && !startInPopChangeView) {
-        const select = document.getElementById('ctrl-indicator-select');
-        const opt = [...select.options].find(o => o.value === startIndicator && !o.disabled);
-        if (opt) { select.value = startIndicator; handleIndicatorChange(select); }
+        selectIndicatorByKey(startIndicator);
       }
 
       // ── Load adjoining SCs — data-linked neighbors always show; anything
