@@ -1,0 +1,386 @@
+zip_code,town,state,county,community,nearest_comp
+53001,Adell,WI,Sheboygan,Wausau,Oshkosh
+53002,Allenton,WI,Washington,Tomah,Milwaukee
+53003,Ashippun,WI,Dodge,Tomah,Milwaukee
+53004,Belgium,WI,Ozaukee,Tomah,Milwaukee
+53005,Brookfield,WI,Waukesha,Dubuque,Milwaukee
+53006,Brownsville,WI,Dodge,Tomah,Oshkosh
+53007,Butler,WI,Waukesha,Tomah,Milwaukee
+53010,Campbellsport,WI,Fond du Lac,Tomah,Oshkosh
+53011,Cascade,WI,Sheboygan,Wausau,Oshkosh
+53012,Cedarburg,WI,Ozaukee,Tomah,Milwaukee
+53013,Cedar Grove,WI,Sheboygan,Wausau,Milwaukee
+53014,Chilton,WI,Calumet,Wausau,Oshkosh
+53015,Cleveland,WI,Manitowoc,Wausau,Oshkosh
+53016,Clyman,WI,Dodge,Tomah,Madison
+53017,Colgate,WI,Washington,Tomah,Milwaukee
+53018,Delafield,WI,Waukesha,Dubuque,Milwaukee
+53019,Eden,WI,Fond du Lac,Tomah,Oshkosh
+53020,Elkhart Lake,WI,Sheboygan,Wausau,Oshkosh
+53021,Fredonia,WI,Ozaukee,Tomah,Milwaukee
+53022,Germantown,WI,Washington,Tomah,Milwaukee
+53023,Glenbeulah,WI,Sheboygan,Wausau,Oshkosh
+53024,Grafton,WI,Ozaukee,Tomah,Milwaukee
+53027,Hartford,WI,Washington,Tomah,Milwaukee
+53029,Hartland,WI,Waukesha,Tomah,Milwaukee
+53031,Hingham,WI,Sheboygan,Wausau,Oshkosh
+53032,Horicon,WI,Dodge,Tomah,Oshkosh
+53033,Hubertus,WI,Washington,Tomah,Milwaukee
+53034,Hustisford,WI,Dodge,Tomah,Milwaukee
+53035,Iron Ridge,WI,Dodge,Tomah,Milwaukee
+53036,Ixonia,WI,Jefferson,Tomah,Milwaukee
+53037,Jackson,WI,Washington,Tomah,Milwaukee
+53038,Johnson Creek,WI,Jefferson,Dubuque,Madison
+53039,Juneau,WI,Dodge,Tomah,Madison
+53040,Kewaskum,WI,Washington,Tomah,Milwaukee
+53042,Kiel,WI,Manitowoc,Wausau,Oshkosh
+53044,Kohler,WI,Sheboygan,Wausau,Oshkosh
+53045,Brookfield,WI,Waukesha,Dubuque,Milwaukee
+53046,Lannon,WI,Waukesha,Tomah,Milwaukee
+53047,Lebanon,WI,Dodge,Tomah,Milwaukee
+53048,Lomira,WI,Dodge,Tomah,Oshkosh
+53049,Malone,WI,Fond du Lac,Wausau,Oshkosh
+53050,Mayville,WI,Dodge,Tomah,Oshkosh
+53051,Menomonee Falls,WI,Waukesha,Tomah,Milwaukee
+53057,Mount Calvary,WI,Fond du Lac,Wausau,Oshkosh
+53058,Nashotah,WI,Waukesha,Tomah,Milwaukee
+53059,Neosho,WI,Dodge,Tomah,Milwaukee
+53061,New Holstein,WI,Calumet,Wausau,Oshkosh
+53063,Newton,WI,Manitowoc,Wausau,Appleton
+53065,Oakfield,WI,Fond du Lac,Tomah,Oshkosh
+53066,Oconomowoc,WI,Waukesha,Tomah,Milwaukee
+53069,Okauchee,WI,Waukesha,Tomah,Milwaukee
+53070,Oostburg,WI,Sheboygan,Wausau,Milwaukee
+53072,Pewaukee,WI,Waukesha,Dubuque,Milwaukee
+53073,Plymouth,WI,Sheboygan,Wausau,Oshkosh
+53074,Port Washington,WI,Ozaukee,Tomah,Milwaukee
+53075,Random Lake,WI,Sheboygan,Tomah,Milwaukee
+53076,Richfield,WI,Washington,Tomah,Milwaukee
+53078,Rubicon,WI,Dodge,Tomah,Milwaukee
+53079,Saint Cloud,WI,Fond du Lac,Wausau,Oshkosh
+53080,Saukville,WI,Ozaukee,Tomah,Milwaukee
+53081,Sheboygan,WI,Sheboygan,Wausau,Oshkosh
+53083,Sheboygan,WI,Sheboygan,Wausau,Oshkosh
+53085,Sheboygan Falls,WI,Sheboygan,Wausau,Oshkosh
+53086,Slinger,WI,Washington,Tomah,Milwaukee
+53088,Stockbridge,WI,Calumet,Wausau,Oshkosh
+53089,Sussex,WI,Waukesha,Tomah,Milwaukee
+53090,West Bend,WI,Washington,Tomah,Milwaukee
+53091,Theresa,WI,Dodge,Tomah,Oshkosh
+53092,Mequon,WI,Ozaukee,Tomah,Milwaukee
+53093,Waldo,WI,Sheboygan,Wausau,Oshkosh
+53094,Watertown,WI,Jefferson,Tomah,Madison
+53095,West Bend,WI,Washington,Tomah,Milwaukee
+53097,Mequon,WI,Ozaukee,Tomah,Milwaukee
+53098,Watertown,WI,Dodge,Tomah,Madison
+53099,Woodland,WI,Dodge,Tomah,Milwaukee
+53103,Big Bend,WI,Waukesha,Dubuque,Milwaukee
+53104,Bristol,WI,Kenosha,Dubuque,Milwaukee
+53105,Burlington,WI,Racine,Dubuque,Milwaukee
+53108,Caledonia,WI,Racine,Dubuque,Milwaukee
+53110,Cudahy,WI,Milwaukee,Dubuque,Milwaukee
+53114,Darien,WI,Walworth,Dubuque,Rockford
+53115,Delavan,WI,Walworth,Dubuque,Rockford
+53118,Dousman,WI,Waukesha,Dubuque,Milwaukee
+53119,Eagle,WI,Waukesha,Dubuque,Milwaukee
+53120,East Troy,WI,Walworth,Dubuque,Milwaukee
+53121,Elkhorn,WI,Walworth,Dubuque,Milwaukee
+53122,Elm Grove,WI,Waukesha,Dubuque,Milwaukee
+53125,Fontana,WI,Walworth,Dubuque,Rockford
+53126,Franksville,WI,Racine,Dubuque,Milwaukee
+53127,Genesee Depot,WI,Waukesha,Dubuque,Milwaukee
+53128,Genoa City,WI,Walworth,Dubuque,Milwaukee
+53129,Greendale,WI,Milwaukee,Dubuque,Milwaukee
+53130,Hales Corners,WI,Milwaukee,Dubuque,Milwaukee
+53132,Franklin,WI,Milwaukee,Dubuque,Milwaukee
+53137,Helenville,WI,Jefferson,Dubuque,Madison
+53139,Kansasville,WI,Racine,Dubuque,Milwaukee
+53140,Kenosha,WI,Kenosha,Dubuque,Milwaukee
+53142,Kenosha,WI,Kenosha,Dubuque,Milwaukee
+53143,Kenosha,WI,Kenosha,Dubuque,Milwaukee
+53144,Kenosha,WI,Kenosha,Dubuque,Milwaukee
+53146,New Berlin,WI,Waukesha,Dubuque,Milwaukee
+53147,Lake Geneva,WI,Walworth,Dubuque,Rockford
+53149,Mukwonago,WI,Waukesha,Dubuque,Milwaukee
+53150,Muskego,WI,Waukesha,Dubuque,Milwaukee
+53151,New Berlin,WI,Waukesha,Dubuque,Milwaukee
+53153,North Prairie,WI,Waukesha,Dubuque,Milwaukee
+53154,Oak Creek,WI,Milwaukee,Dubuque,Milwaukee
+53156,Palmyra,WI,Jefferson,Dubuque,Milwaukee
+53157,Pell Lake,WI,Walworth,Dubuque,Rockford
+53158,Pleasant Prairie,WI,Kenosha,Dubuque,Milwaukee
+53167,Rochester,WI,Racine,Dubuque,Milwaukee
+53168,Salem,WI,Kenosha,Dubuque,Milwaukee
+53170,Silver Lake,WI,Kenosha,Dubuque,Milwaukee
+53172,South Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53176,Springfield,WI,Walworth,Dubuque,Milwaukee
+53177,Sturtevant,WI,Racine,Dubuque,Milwaukee
+53178,Sullivan,WI,Jefferson,Dubuque,Milwaukee
+53179,Trevor,WI,Kenosha,Dubuque,Milwaukee
+53181,Twin Lakes,WI,Kenosha,Dubuque,Milwaukee
+53182,Union Grove,WI,Racine,Dubuque,Milwaukee
+53183,Wales,WI,Waukesha,Dubuque,Milwaukee
+53184,Walworth,WI,Walworth,Dubuque,Rockford
+53185,Waterford,WI,Racine,Dubuque,Milwaukee
+53186,Waukesha,WI,Waukesha,Dubuque,Milwaukee
+53188,Waukesha,WI,Waukesha,Dubuque,Milwaukee
+53189,Waukesha,WI,Waukesha,Dubuque,Milwaukee
+53190,Whitewater,WI,Walworth,Dubuque,Madison
+53191,Williams Bay,WI,Walworth,Dubuque,Rockford
+53192,Wilmot,WI,Kenosha,Dubuque,Milwaukee
+53195,Zenda,WI,Walworth,Dubuque,Rockford
+53202,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53203,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53204,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53205,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53206,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53207,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53208,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53209,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53210,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53211,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53212,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53213,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53214,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53215,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53216,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53217,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53218,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53219,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53220,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53221,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53222,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53223,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53224,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53225,Milwaukee,WI,Milwaukee,Tomah,Milwaukee
+53226,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53227,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53228,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53233,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53235,Saint Francis,WI,Milwaukee,Dubuque,Milwaukee
+53295,Milwaukee,WI,Milwaukee,Dubuque,Milwaukee
+53402,Racine,WI,Racine,Dubuque,Milwaukee
+53403,Racine,WI,Racine,Dubuque,Milwaukee
+53404,Racine,WI,Racine,Dubuque,Milwaukee
+53405,Racine,WI,Racine,Dubuque,Milwaukee
+53406,Racine,WI,Racine,Dubuque,Milwaukee
+53501,Afton,WI,Rock,Dubuque,Rockford
+53502,Albany,WI,Green,Dubuque,Madison
+53503,Arena,WI,Iowa,Dubuque,Madison
+53505,Avalon,WI,Rock,Dubuque,Rockford
+53507,Barneveld,WI,Iowa,Dubuque,Madison
+53508,Belleville,WI,Dane,Dubuque,Madison
+53511,Beloit,WI,Rock,Dubuque,Rockford
+53515,Black Earth,WI,Dane,Dubuque,Madison
+53516,Blanchardville,WI,Lafayette,Dubuque,Madison
+53517,Blue Mounds,WI,Dane,Dubuque,Madison
+53520,Brodhead,WI,Rock,Dubuque,Rockford
+53521,Brooklyn,WI,Green,Dubuque,Madison
+53523,Cambridge,WI,Dane,Dubuque,Madison
+53525,Clinton,WI,Rock,Dubuque,Rockford
+53527,Cottage Grove,WI,Dane,Dubuque,Madison
+53528,Cross Plains,WI,Dane,Dubuque,Madison
+53529,Dane,WI,Dane,Tomah,Madison
+53531,Deerfield,WI,Dane,Dubuque,Madison
+53532,Deforest,WI,Dane,Tomah,Madison
+53534,Edgerton,WI,Rock,Dubuque,Madison
+53536,Evansville,WI,Rock,Dubuque,Madison
+53537,Footville,WI,Rock,Dubuque,Rockford
+53538,Fort Atkinson,WI,Jefferson,Dubuque,Madison
+53544,Hollandale,WI,Iowa,Dubuque,Madison
+53545,Janesville,WI,Rock,Dubuque,Madison
+53546,Janesville,WI,Rock,Dubuque,Rockford
+53548,Janesville,WI,Rock,Dubuque,Rockford
+53549,Jefferson,WI,Jefferson,Dubuque,Madison
+53550,Juda,WI,Green,Dubuque,Rockford
+53551,Lake Mills,WI,Jefferson,Dubuque,Madison
+53555,Lodi,WI,Columbia,Tomah,Madison
+53557,Lowell,WI,Dodge,Tomah,Madison
+53558,Mcfarland,WI,Dane,Dubuque,Madison
+53559,Marshall,WI,Dane,Tomah,Madison
+53560,Mazomanie,WI,Dane,Dubuque,Madison
+53561,Merrimac,WI,Sauk,Tomah,Madison
+53562,Middleton,WI,Dane,Dubuque,Madison
+53563,Milton,WI,Rock,Dubuque,Madison
+53566,Monroe,WI,Green,Dubuque,Madison
+53570,Monticello,WI,Green,Dubuque,Madison
+53571,Morrisonville,WI,Dane,Tomah,Madison
+53572,Mount Horeb,WI,Dane,Dubuque,Madison
+53574,New Glarus,WI,Green,Dubuque,Madison
+53575,Oregon,WI,Dane,Dubuque,Madison
+53576,Orfordville,WI,Rock,Dubuque,Rockford
+53577,Plain,WI,Sauk,Tomah,Madison
+53578,Prairie Du Sac,WI,Sauk,Tomah,Madison
+53579,Reeseville,WI,Dodge,Tomah,Madison
+53582,Ridgeway,WI,Iowa,Dubuque,Madison
+53583,Sauk City,WI,Sauk,Tomah,Madison
+53585,Sharon,WI,Walworth,Dubuque,Rockford
+53588,Spring Green,WI,Sauk,Dubuque,Madison
+53589,Stoughton,WI,Dane,Dubuque,Madison
+53590,Sun Prairie,WI,Dane,Tomah,Madison
+53593,Verona,WI,Dane,Dubuque,Madison
+53594,Waterloo,WI,Jefferson,Tomah,Madison
+53597,Waunakee,WI,Dane,Tomah,Madison
+53598,Windsor,WI,Dane,Tomah,Madison
+53703,Madison,WI,Dane,Dubuque,Madison
+53704,Madison,WI,Dane,Dubuque,Madison
+53705,Madison,WI,Dane,Dubuque,Madison
+53706,Madison,WI,Dane,Dubuque,Madison
+53711,Madison,WI,Dane,Dubuque,Madison
+53713,Madison,WI,Dane,Dubuque,Madison
+53714,Madison,WI,Dane,Dubuque,Madison
+53715,Madison,WI,Dane,Dubuque,Madison
+53716,Madison,WI,Dane,Dubuque,Madison
+53717,Madison,WI,Dane,Dubuque,Madison
+53718,Madison,WI,Dane,Dubuque,Madison
+53719,Madison,WI,Dane,Dubuque,Madison
+53726,Madison,WI,Dane,Dubuque,Madison
+53901,Portage,WI,Columbia,Tomah,Madison
+53911,Arlington,WI,Columbia,Tomah,Madison
+53913,Baraboo,WI,Sauk,Tomah,Madison
+53916,Beaver Dam,WI,Dodge,Tomah,Madison
+53919,Brandon,WI,Fond du Lac,Tomah,Oshkosh
+53920,Briggsville,WI,Adams,Tomah,Madison
+53922,Burnett,WI,Dodge,Tomah,Oshkosh
+53923,Cambria,WI,Columbia,Tomah,Madison
+53925,Columbus,WI,Columbia,Tomah,Madison
+53926,Dalton,WI,Green Lake,Tomah,Oshkosh
+53928,Doylestown,WI,Columbia,Tomah,Madison
+53930,Endeavor,WI,Marquette,Tomah,Madison
+53931,Fairwater,WI,Fond du Lac,Tomah,Oshkosh
+53932,Fall River,WI,Columbia,Tomah,Madison
+53933,Fox Lake,WI,Dodge,Tomah,Oshkosh
+53935,Friesland,WI,Columbia,Tomah,Madison
+53937,Hillpoint,WI,Sauk,Tomah,Madison
+53939,Kingston,WI,Green Lake,Tomah,Oshkosh
+53940,Lake Delton,WI,Sauk,Tomah,Madison
+53943,Loganville,WI,Sauk,Tomah,Madison
+53946,Markesan,WI,Green Lake,Tomah,Oshkosh
+53947,Marquette,WI,Green Lake,Tomah,Oshkosh
+53949,Montello,WI,Marquette,Tomah,Oshkosh
+53951,North Freedom,WI,Sauk,Tomah,Madison
+53954,Pardeeville,WI,Columbia,Tomah,Madison
+53955,Poynette,WI,Columbia,Tomah,Madison
+53956,Randolph,WI,Columbia,Tomah,Madison
+53960,Rio,WI,Columbia,Tomah,Madison
+53961,Rock Springs,WI,Sauk,Tomah,Madison
+53963,Waupun,WI,Fond du Lac,Tomah,Oshkosh
+53969,Wyocena,WI,Columbia,Tomah,Madison
+54101,Abrams,WI,Oconto,Wausau,Green Bay
+54102,Amberg,WI,Marinette,Wausau,Green Bay
+54104,Athelstane,WI,Marinette,Wausau,Green Bay
+54106,Black Creek,WI,Outagamie,Wausau,Appleton
+54107,Bonduel,WI,Shawano,Wausau,Green Bay
+54110,Brillion,WI,Calumet,Wausau,Appleton
+54111,Cecil,WI,Shawano,Wausau,Green Bay
+54112,Coleman,WI,Marinette,Wausau,Green Bay
+54113,Combined Locks,WI,Outagamie,Wausau,Appleton
+54114,Crivitz,WI,Marinette,Wausau,Green Bay
+54115,De Pere,WI,Brown,Wausau,Green Bay
+54119,Dunbar,WI,Marinette,Wausau,Green Bay
+54123,Forest Junction,WI,Calumet,Wausau,Appleton
+54124,Gillett,WI,Oconto,Wausau,Green Bay
+54126,Greenleaf,WI,Brown,Wausau,Green Bay
+54127,Green Valley,WI,Shawano,Wausau,Green Bay
+54129,Hilbert,WI,Calumet,Wausau,Appleton
+54130,Kaukauna,WI,Outagamie,Wausau,Appleton
+54135,Keshena,WI,Menominee,Wausau,Green Bay
+54136,Kimberly,WI,Outagamie,Wausau,Appleton
+54137,Krakow,WI,Shawano,Wausau,Green Bay
+54138,Lakewood,WI,Oconto,Wausau,Green Bay
+54139,Lena,WI,Oconto,Wausau,Green Bay
+54140,Little Chute,WI,Outagamie,Wausau,Appleton
+54141,Little Suamico,WI,Oconto,Wausau,Green Bay
+54143,Marinette,WI,Marinette,Wausau,Green Bay
+54149,Mountain,WI,Oconto,Wausau,Green Bay
+54151,Niagara,WI,Marinette,Wausau,Green Bay
+54152,Nichols,WI,Outagamie,Wausau,Appleton
+54153,Oconto,WI,Oconto,Wausau,Green Bay
+54154,Oconto Falls,WI,Oconto,Wausau,Green Bay
+54155,Oneida,WI,Brown,Wausau,Green Bay
+54156,Pembine,WI,Marinette,Wausau,Green Bay
+54157,Peshtigo,WI,Marinette,Wausau,Green Bay
+54159,Porterfield,WI,Marinette,Wausau,Green Bay
+54160,Potter,WI,Calumet,Wausau,Appleton
+54161,Pound,WI,Oconto,Wausau,Green Bay
+54162,Pulaski,WI,Shawano,Wausau,Green Bay
+54165,Seymour,WI,Outagamie,Wausau,Green Bay
+54166,Shawano,WI,Shawano,Wausau,Green Bay
+54169,Sherwood,WI,Calumet,Wausau,Appleton
+54170,Shiocton,WI,Outagamie,Wausau,Appleton
+54171,Sobieski,WI,Oconto,Wausau,Green Bay
+54173,Suamico,WI,Brown,Wausau,Green Bay
+54174,Suring,WI,Oconto,Wausau,Green Bay
+54177,Wausaukee,WI,Marinette,Wausau,Green Bay
+54180,Wrightstown,WI,Brown,Wausau,Appleton
+54201,Algoma,WI,Kewaunee,Wausau,Green Bay
+54202,Baileys Harbor,WI,Door,Wausau,Green Bay
+54204,Brussels,WI,Door,Wausau,Green Bay
+54205,Casco,WI,Kewaunee,Wausau,Green Bay
+54207,Collins,WI,Manitowoc,Wausau,Appleton
+54208,Denmark,WI,Brown,Wausau,Green Bay
+54209,Egg Harbor,WI,Door,Wausau,Green Bay
+54210,Ellison Bay,WI,Door,Wausau,Green Bay
+54211,Ephraim,WI,Door,Wausau,Green Bay
+54212,Fish Creek,WI,Door,Wausau,Green Bay
+54213,Forestville,WI,Door,Wausau,Green Bay
+54214,Francis Creek,WI,Manitowoc,Wausau,Green Bay
+54215,Kellnersville,WI,Manitowoc,Wausau,Green Bay
+54216,Kewaunee,WI,Kewaunee,Wausau,Green Bay
+54217,Luxemburg,WI,Kewaunee,Wausau,Green Bay
+54220,Manitowoc,WI,Manitowoc,Wausau,Green Bay
+54227,Maribel,WI,Manitowoc,Wausau,Green Bay
+54228,Mishicot,WI,Manitowoc,Wausau,Green Bay
+54229,New Franken,WI,Brown,Wausau,Green Bay
+54230,Reedsville,WI,Manitowoc,Wausau,Green Bay
+54232,Saint Nazianz,WI,Manitowoc,Wausau,Appleton
+54234,Sister Bay,WI,Door,Wausau,Green Bay
+54235,Sturgeon Bay,WI,Door,Wausau,Green Bay
+54241,Two Rivers,WI,Manitowoc,Wausau,Green Bay
+54245,Valders,WI,Manitowoc,Wausau,Appleton
+54246,Washington Island,WI,Door,Wausau,Green Bay
+54247,Whitelaw,WI,Manitowoc,Wausau,Green Bay
+54301,Green Bay,WI,Brown,Wausau,Green Bay
+54302,Green Bay,WI,Brown,Wausau,Green Bay
+54303,Green Bay,WI,Brown,Wausau,Green Bay
+54304,Green Bay,WI,Brown,Wausau,Green Bay
+54307,Green Bay,WI,Brown,Wausau,Green Bay
+54311,Green Bay,WI,Brown,Wausau,Green Bay
+54313,Green Bay,WI,Brown,Wausau,Green Bay
+54901,Oshkosh,WI,Winnebago,Wausau,Oshkosh
+54902,Oshkosh,WI,Winnebago,Wausau,Oshkosh
+54904,Oshkosh,WI,Winnebago,Wausau,Oshkosh
+54911,Appleton,WI,Outagamie,Wausau,Appleton
+54913,Appleton,WI,Outagamie,Wausau,Appleton
+54914,Appleton,WI,Outagamie,Wausau,Appleton
+54915,Appleton,WI,Calumet,Wausau,Appleton
+54922,Bear Creek,WI,Outagamie,Wausau,Appleton
+54927,Butte Des Morts,WI,Winnebago,Wausau,Oshkosh
+54929,Clintonville,WI,Waupaca,Wausau,Appleton
+54931,Dale,WI,Outagamie,Wausau,Appleton
+54932,Eldorado,WI,Fond du Lac,Tomah,Oshkosh
+54933,Embarrass,WI,Waupaca,Wausau,Appleton
+54935,Fond Du Lac,WI,Fond du Lac,Wausau,Oshkosh
+54937,Fond Du Lac,WI,Fond du Lac,Tomah,Oshkosh
+54940,Fremont,WI,Winnebago,Wausau,Oshkosh
+54941,Green Lake,WI,Green Lake,Tomah,Oshkosh
+54942,Greenville,WI,Outagamie,Wausau,Appleton
+54944,Hortonville,WI,Outagamie,Wausau,Appleton
+54947,Larsen,WI,Winnebago,Wausau,Appleton
+54949,Manawa,WI,Waupaca,Wausau,Appleton
+54952,Menasha,WI,Calumet,Wausau,Appleton
+54956,Neenah,WI,Winnebago,Wausau,Appleton
+54960,Neshkoro,WI,Marquette,Tomah,Oshkosh
+54961,New London,WI,Waupaca,Wausau,Appleton
+54963,Omro,WI,Winnebago,Wausau,Oshkosh
+54964,Pickett,WI,Winnebago,Wausau,Oshkosh
+54965,Pine River,WI,Waushara,Wausau,Oshkosh
+54967,Poy Sippi,WI,Waushara,Wausau,Oshkosh
+54968,Princeton,WI,Green Lake,Tomah,Oshkosh
+54971,Ripon,WI,Fond du Lac,Tomah,Oshkosh
+54974,Rosendale,WI,Fond du Lac,Tomah,Oshkosh
+54979,Van Dyne,WI,Fond du Lac,Wausau,Oshkosh
+54980,Waukau,WI,Winnebago,Wausau,Oshkosh
+54983,Weyauwega,WI,Waupaca,Wausau,Appleton
+54985,Winnebago,WI,Winnebago,Wausau,Oshkosh
+54986,Winneconne,WI,Winnebago,Wausau,Oshkosh

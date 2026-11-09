@@ -1,0 +1,10 @@
+Change
+"v4: Eastern Wisconsin excluded (385 ZIPs): closer to Milwaukee, Madison, Green Bay, Appleton/Oshkosh or Rockford than to an IAC hub"
+"v5: Windom area redone from John's Oct 9-12 emails. 23 ZIPs moved. New Communities: St. James, Springfield MN, Slayton, Estherville"
+"v5: Shared (floater): Comfrey (Sleepy Eye/Springfield), Mountain Lake (Springfield/Windom), Heron Lake and Okabena (Windom/Worthington)"
+"v5: Claude's own calls (not John's): Superior IA and Dunnell to Estherville; Sherburn to Blue Earth; Darfur and Ormsby to St. James; Dovray, Iona, Fulda, Currie to Slayton; Estherville service center set to Blue Earth"
+"v7: Western Dakotas cut. Williston, Dickinson, Minot, Bismarck and Pierre Communities removed (309 ZIPs). Rule: a ZIP stays only if it is within 45 miles of, and closer to, an eastern hub (Devils Lake, Carrington, Jamestown, Aberdeen, Chamberlain, Grand Forks, Fargo, Huron, Mitchell, Watertown, Sioux Falls) than to Minot, Bismarck, Williston, Dickinson or Pierre. 27 ZIPs stay and move to the nearest eastern Community."
+"v7: Nebraska corner added: 31 ZIPs in NE Nebraska within 45 miles of Sioux City, Yankton, Vermillion or Sioux Falls and closer to them than to Norfolk, Omaha or Lincoln. Population left blank (not in our source)."
+"v7: Carrington service center changed from Bismarck (cut) to Fargo, same as Jamestown. Minot, Bismarck, Williston, Dickinson and Pierre service centers removed."
+"v7: Full Service Area outline is now deliberately smoothed and fuzzed (no straight political-boundary edges; north edge along Canada softened and bulged slightly north). It is a styling shape, not an exact ZIP edge; Community outlines are still exact."
+"Totals now: 132 Communities, 61 Service Centers, 5 Anchors, 2749 ZIPs"

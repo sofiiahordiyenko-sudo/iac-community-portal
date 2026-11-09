@@ -1,0 +1,337 @@
+zip_code,town,state,county,old_community,decision,new_community,miles_to_eastern_hub,miles_to_cut_hub,nearest_cut_hub
+57621,Bullhead,SD,Corson,Bismarck,Cut,(cut),127,73,Bismarck
+57632,Herreid,SD,Campbell,Bismarck,Cut,(cut),80,76,Bismarck
+57639,Little Eagle,SD,Corson,Bismarck,Cut,(cut),113,78,Bismarck
+57641,McIntosh,SD,Corson,Bismarck,Cut,(cut),139,68,Bismarck
+57642,McLaughlin,SD,Corson,Bismarck,Cut,(cut),110,71,Bismarck
+57645,Morristown,SD,Corson,Bismarck,Cut,(cut),159,76,Bismarck
+57648,Pollock,SD,Campbell,Bismarck,Cut,(cut),94,65,Bismarck
+57659,Walker,SD,Corson,Bismarck,Cut,(cut),130,65,Bismarck
+57660,Watauga,SD,Corson,Bismarck,Cut,(cut),149,76,Bismarck
+58428,Dawson,ND,Kidder,Bismarck,Cut,(cut),50,49,Bismarck
+58430,Denhoff,ND,Sheridan,Bismarck,Cut,(cut),53,54,Bismarck
+58444,Goodrich,ND,Sheridan,Bismarck,Cut,(cut),47,56,Bismarck
+58463,Mcclusky,ND,Sheridan,Bismarck,Cut,(cut),63,50,Bismarck
+58477,Regan,ND,Burleigh,Bismarck,Cut,(cut),67,31,Bismarck
+58482,Steele,ND,Kidder,Bismarck,Cut,(cut),54,42,Bismarck
+58488,Tuttle,ND,Kidder,Bismarck,Cut,(cut),45,45,Bismarck
+58494,Wing,ND,Burleigh,Bismarck,Cut,(cut),57,34,Bismarck
+58501,Bismarck,ND,Burleigh,Bismarck,Cut,(cut),86,4,Bismarck
+58503,Bismarck,ND,Burleigh,Bismarck,Cut,(cut),85,7,Bismarck
+58504,Bismarck,ND,Burleigh,Bismarck,Cut,(cut),89,7,Bismarck
+58505,Bismarck,ND,Burleigh,Bismarck,Cut,(cut),89,1,Bismarck
+58520,Almont,ND,Morton,Bismarck,Cut,(cut),126,37,Bismarck
+58521,Baldwin,ND,Burleigh,Bismarck,Cut,(cut),78,16,Bismarck
+58524,Braddock,ND,Emmons,Bismarck,Cut,(cut),68,36,Bismarck
+58528,Cannon Ball,ND,Sioux,Bismarck,Cut,(cut),99,33,Bismarck
+58529,Carson,ND,Grant,Bismarck,Cut,(cut),140,51,Bismarck
+58530,Center,ND,Oliver,Bismarck,Cut,(cut),97,28,Bismarck
+58532,Driscoll,ND,Burleigh,Bismarck,Cut,(cut),62,32,Bismarck
+58533,Elgin,ND,Grant,Bismarck,Cut,(cut),146,56,Bismarck
+58535,Flasher,ND,Morton,Bismarck,Cut,(cut),120,31,Bismarck
+58538,Fort Yates,ND,Sioux,Bismarck,Cut,(cut),109,50,Bismarck
+58542,Hague,ND,Emmons,Bismarck,Cut,(cut),84,64,Bismarck
+58544,Hazelton,ND,Emmons,Bismarck,Cut,(cut),84,29,Bismarck
+58545,Hazen,ND,Mercer,Bismarck,Cut,(cut),115,53,Bismarck
+58549,Kintyre,ND,Emmons,Bismarck,Cut,(cut),66,47,Bismarck
+58552,Linton,ND,Emmons,Bismarck,Cut,(cut),88,44,Bismarck
+58554,Mandan,ND,Morton,Bismarck,Cut,(cut),98,9,Bismarck
+58558,Menoken,ND,Burleigh,Bismarck,Cut,(cut),79,12,Bismarck
+58559,Mercer,ND,McLean,Bismarck,Cut,(cut),74,47,Bismarck
+58560,Moffit,ND,Burleigh,Bismarck,Cut,(cut),79,24,Bismarck
+58563,New Salem,ND,Morton,Bismarck,Cut,(cut),115,31,Bismarck
+58564,Raleigh,ND,Grant,Bismarck,Cut,(cut),133,46,Bismarck
+58566,Saint Anthony,ND,Morton,Bismarck,Cut,(cut),103,17,Bismarck
+58568,Selfridge,ND,Sioux,Bismarck,Cut,(cut),123,51,Bismarck
+58569,Shields,ND,Grant,Bismarck,Cut,(cut),126,43,Bismarck
+58570,Solen,ND,Morton,Bismarck,Cut,(cut),109,30,Bismarck
+58571,Stanton,ND,Mercer,Bismarck,Cut,(cut),107,45,Bismarck
+58572,Sterling,ND,Burleigh,Bismarck,Cut,(cut),70,21,Bismarck
+58573,Strasburg,ND,Emmons,Bismarck,Cut,(cut),90,55,Bismarck
+58577,Washburn,ND,McLean,Bismarck,Cut,(cut),91,38,Bismarck
+58579,Wilton,ND,Burleigh,Bismarck,Cut,(cut),78,26,Bismarck
+58581,Zeeland,ND,McIntosh,Bismarck,Cut,(cut),75,71,Bismarck
+58423,Chaseley,ND,Wells,Bismarck,Stays (moved into nearest eastern Community),Carrington,33,62,Bismarck
+58451,Hurdsfield,ND,Wells,Bismarck,Stays (moved into nearest eastern Community),Carrington,39,59,Bismarck
+57620,Bison,SD,Perkins,Dickinson,Cut,(cut),192,104,Dickinson
+57634,Keldron,SD,Corson,Dickinson,Cut,(cut),165,89,Dickinson
+57638,Lemmon,SD,Perkins,Dickinson,Cut,(cut),182,75,Dickinson
+57640,Lodgepole,SD,Perkins,Dickinson,Cut,(cut),205,77,Dickinson
+57644,Meadow,SD,Perkins,Dickinson,Cut,(cut),174,104,Dickinson
+57649,Prairie City,SD,Perkins,Dickinson,Cut,(cut),209,96,Dickinson
+57650,Ralph,SD,Harding,Dickinson,Cut,(cut),216,73,Dickinson
+57651,Reva,SD,Harding,Dickinson,Cut,(cut),217,97,Dickinson
+57717,Belle Fourche,SD,Butte,Dickinson,Cut,(cut),240,143,Dickinson
+57720,Buffalo,SD,Harding,Dickinson,Cut,(cut),242,100,Dickinson
+57724,Camp Crook,SD,Harding,Dickinson,Cut,(cut),265,103,Dickinson
+57755,Ludlow,SD,Harding,Dickinson,Cut,(cut),230,77,Dickinson
+57760,Newell,SD,Butte,Dickinson,Cut,(cut),211,137,Dickinson
+57762,Nisland,SD,Butte,Dickinson,Cut,(cut),221,152,Dickinson
+57776,Redig,SD,Harding,Dickinson,Cut,(cut),229,118,Dickinson
+57779,Saint Onge,SD,Lawrence,Dickinson,Cut,(cut),226,167,Dickinson
+57783,Spearfish,SD,Lawrence,Dickinson,Cut,(cut),232,175,Dickinson
+57799,Spearfish,SD,Lawrence,Dickinson,Cut,(cut),230,173,Dickinson
+58523,Beulah,ND,Mercer,Dickinson,Cut,(cut),125,54,Dickinson
+58541,Golden Valley,ND,Mercer,Dickinson,Cut,(cut),137,47,Dickinson
+58562,New Leipzig,ND,Grant,Dickinson,Cut,(cut),155,51,Dickinson
+58580,Zap,ND,Mercer,Dickinson,Cut,(cut),132,48,Dickinson
+58601,Dickinson,ND,Stark,Dickinson,Cut,(cut),178,3,Dickinson
+58620,Amidon,ND,Slope,Dickinson,Cut,(cut),210,38,Dickinson
+58621,Beach,ND,Golden Valley,Dickinson,Cut,(cut),226,56,Dickinson
+58622,Belfield,ND,Billings,Dickinson,Cut,(cut),197,22,Dickinson
+58623,Bowman,ND,Bowman,Dickinson,Cut,(cut),222,58,Dickinson
+58625,Dodge,ND,Dunn,Dickinson,Cut,(cut),144,39,Dickinson
+58626,Dunn Center,ND,Dunn,Dickinson,Cut,(cut),163,35,Dickinson
+58627,Fairfield,ND,Billings,Dickinson,Cut,(cut),196,34,Dickinson
+58630,Gladstone,ND,Stark,Dickinson,Cut,(cut),166,10,Dickinson
+58631,Glen Ullin,ND,Morton,Dickinson,Cut,(cut),134,46,Dickinson
+58632,Golva,ND,Golden Valley,Dickinson,Cut,(cut),233,57,Dickinson
+58634,Grassy Butte,ND,McKenzie,Dickinson,Cut,(cut),198,47,Dickinson
+58636,Halliday,ND,Dunn,Dickinson,Cut,(cut),151,41,Dickinson
+58638,Hebron,ND,Morton,Dickinson,Cut,(cut),142,35,Dickinson
+58639,Hettinger,ND,Adams,Dickinson,Cut,(cut),193,58,Dickinson
+58640,Killdeer,ND,Dunn,Dickinson,Cut,(cut),176,39,Dickinson
+58641,Lefor,ND,Stark,Dickinson,Cut,(cut),167,20,Dickinson
+58642,Manning,ND,Dunn,Dickinson,Cut,(cut),175,22,Dickinson
+58643,Marmarth,ND,Bowman,Dickinson,Cut,(cut),243,71,Dickinson
+58644,Marshall,ND,Dunn,Dickinson,Cut,(cut),153,27,Dickinson
+58645,Medora,ND,Billings,Dickinson,Cut,(cut),209,35,Dickinson
+58646,Mott,ND,Hettinger,Dickinson,Cut,(cut),166,41,Dickinson
+58647,New England,ND,Slope,Dickinson,Cut,(cut),191,26,Dickinson
+58649,Reeder,ND,Adams,Dickinson,Cut,(cut),201,52,Dickinson
+58650,Regent,ND,Hettinger,Dickinson,Cut,(cut),178,32,Dickinson
+58651,Rhame,ND,Bowman,Dickinson,Cut,(cut),233,62,Dickinson
+58652,Richardton,ND,Stark,Dickinson,Cut,(cut),153,25,Dickinson
+58653,Scranton,ND,Bowman,Dickinson,Cut,(cut),211,56,Dickinson
+58654,Sentinel Butte,ND,Golden Valley,Dickinson,Cut,(cut),225,49,Dickinson
+58655,South Heart,ND,Stark,Dickinson,Cut,(cut),189,13,Dickinson
+58656,Taylor,ND,Stark,Dickinson,Cut,(cut),161,16,Dickinson
+58757,Mandaree,ND,Dunn,Dickinson,Cut,(cut),160,56,Dickinson
+58313,Balta,ND,Pierce,Minot,Cut,(cut),54,58,Minot
+58316,Belcourt,ND,Rolette,Minot,Cut,(cut),65,81,Minot
+58318,Bottineau,ND,Bottineau,Minot,Cut,(cut),87,59,Minot
+58329,Dunseith,ND,Rolette,Minot,Cut,(cut),77,71,Minot
+58339,Hansboro,ND,Towner,Minot,Cut,(cut),63,103,Minot
+58353,Mylo,ND,Rolette,Minot,Cut,(cut),50,83,Minot
+58363,Perth,ND,Towner,Minot,Cut,(cut),53,91,Minot
+58365,Rocklake,ND,Towner,Minot,Cut,(cut),53,103,Minot
+58366,Rolette,ND,Rolette,Minot,Cut,(cut),59,72,Minot
+58367,Rolla,ND,Rolette,Minot,Cut,(cut),62,92,Minot
+58368,Rugby,ND,Pierce,Minot,Cut,(cut),55,58,Minot
+58369,Saint John,ND,Rolette,Minot,Cut,(cut),73,83,Minot
+58372,Sarles,ND,Towner,Minot,Cut,(cut),57,115,Minot
+58384,Willow City,ND,Bottineau,Minot,Cut,(cut),72,53,Minot
+58531,Coleharbor,ND,McLean,Minot,Cut,(cut),97,45,Minot
+58540,Garrison,ND,McLean,Minot,Cut,(cut),122,47,Minot
+58565,Riverdale,ND,McLean,Minot,Cut,(cut),105,51,Minot
+58575,Turtle Lake,ND,McLean,Minot,Cut,(cut),83,50,Minot
+58576,Underwood,ND,McLean,Minot,Cut,(cut),98,48,Bismarck
+58701,Minot,ND,Ward,Minot,Cut,(cut),113,7,Minot
+58703,Minot,ND,Ward,Minot,Cut,(cut),114,7,Minot
+58704,Minot Afb,ND,Ward,Minot,Cut,(cut),115,13,Minot
+58705,Minot Afb,ND,Ward,Minot,Cut,(cut),116,13,Minot
+58707,Minot,ND,Ward,Minot,Cut,(cut),113,1,Minot
+58710,Anamoose,ND,McHenry,Minot,Cut,(cut),59,55,Minot
+58711,Antler,ND,Bottineau,Minot,Cut,(cut),124,48,Minot
+58712,Balfour,ND,McHenry,Minot,Cut,(cut),75,39,Minot
+58713,Bantry,ND,McHenry,Minot,Cut,(cut),85,37,Minot
+58716,Benedict,ND,McLean,Minot,Cut,(cut),93,32,Minot
+58718,Berthold,ND,Ward,Minot,Cut,(cut),137,25,Minot
+58721,Bowbells,ND,Burke,Minot,Cut,(cut),163,60,Minot
+58722,Burlington,ND,Ward,Minot,Cut,(cut),122,10,Minot
+58723,Butte,ND,McLean,Minot,Cut,(cut),72,46,Minot
+58725,Carpio,ND,Renville,Minot,Cut,(cut),132,25,Minot
+58731,Deering,ND,McHenry,Minot,Cut,(cut),100,21,Minot
+58733,Des Lacs,ND,Ward,Minot,Cut,(cut),125,14,Minot
+58734,Donnybrook,ND,Ward,Minot,Cut,(cut),145,36,Minot
+58735,Douglas,ND,Ward,Minot,Cut,(cut),114,26,Minot
+58736,Drake,ND,McHenry,Minot,Cut,(cut),67,47,Minot
+58737,Flaxton,ND,Burke,Minot,Cut,(cut),171,68,Minot
+58740,Glenburn,ND,Renville,Minot,Cut,(cut),111,17,Minot
+58741,Granville,ND,McHenry,Minot,Cut,(cut),91,21,Minot
+58744,Karlsruhe,ND,McHenry,Minot,Cut,(cut),79,34,Minot
+58746,Kenmare,ND,Ward,Minot,Cut,(cut),154,50,Minot
+58748,Kramer,ND,Bottineau,Minot,Cut,(cut),90,42,Minot
+58750,Lansford,ND,Bottineau,Minot,Cut,(cut),121,27,Minot
+58756,Makoti,ND,Ward,Minot,Cut,(cut),130,30,Minot
+58758,Martin,ND,Sheridan,Minot,Cut,(cut),51,64,Minot
+58759,Max,ND,McLean,Minot,Cut,(cut),103,27,Minot
+58760,Maxbass,ND,Bottineau,Minot,Cut,(cut),112,33,Minot
+58761,Mohall,ND,Renville,Minot,Cut,(cut),131,40,Minot
+58762,Newburg,ND,Bottineau,Minot,Cut,(cut),103,35,Minot
+58768,Norwich,ND,McHenry,Minot,Cut,(cut),99,13,Minot
+58769,Palermo,ND,Mountrail,Minot,Cut,(cut),155,43,Minot
+58770,Parshall,ND,Mountrail,Minot,Cut,(cut),144,47,Minot
+58771,Plaza,ND,Mountrail,Minot,Cut,(cut),140,33,Minot
+58775,Roseglen,ND,McLean,Minot,Cut,(cut),128,44,Minot
+58778,Ruso,ND,McLean,Minot,Cut,(cut),86,36,Minot
+58779,Ryder,ND,McLean,Minot,Cut,(cut),126,34,Minot
+58781,Sawyer,ND,Ward,Minot,Cut,(cut),101,16,Minot
+58782,Sherwood,ND,Renville,Minot,Cut,(cut),142,52,Minot
+58783,Souris,ND,Bottineau,Minot,Cut,(cut),101,51,Minot
+58784,Stanley,ND,Mountrail,Minot,Cut,(cut),165,53,Minot
+58785,Surrey,ND,Ward,Minot,Cut,(cut),104,11,Minot
+58787,Tolley,ND,Renville,Minot,Cut,(cut),142,43,Minot
+58788,Towner,ND,McHenry,Minot,Cut,(cut),76,38,Minot
+58789,Upham,ND,McHenry,Minot,Cut,(cut),95,31,Minot
+58790,Velva,ND,McHenry,Minot,Cut,(cut),93,22,Minot
+58792,Voltaire,ND,McHenry,Minot,Cut,(cut),83,31,Minot
+58793,Westhope,ND,Bottineau,Minot,Cut,(cut),113,45,Minot
+58310,Agate,ND,Rolette,Minot,Stays (moved into nearest eastern Community),Devils Lake,44,84,Minot
+58317,Bisbee,ND,Towner,Minot,Stays (moved into nearest eastern Community),Devils Lake,43,92,Minot
+58324,Cando,ND,Towner,Minot,Stays (moved into nearest eastern Community),Devils Lake,30,97,Minot
+58325,Churchs Ferry,ND,Ramsey,Minot,Stays (moved into nearest eastern Community),Devils Lake,18,99,Minot
+58331,Egeland,ND,Towner,Minot,Stays (moved into nearest eastern Community),Devils Lake,38,105,Minot
+58332,Esmond,ND,Benson,Minot,Stays (moved into nearest eastern Community),Devils Lake,42,72,Minot
+58341,Harvey,ND,Wells,Minot,Stays (moved into nearest eastern Community),Carrington,41,74,Minot
+58343,Knox,ND,Benson,Minot,Stays (moved into nearest eastern Community),Devils Lake,42,72,Minot
+58346,Leeds,ND,Benson,Minot,Stays (moved into nearest eastern Community),Devils Lake,28,86,Minot
+58348,Maddock,ND,Benson,Minot,Stays (moved into nearest eastern Community),Devils Lake,32,84,Minot
+58351,Minnewaukan,ND,Benson,Minot,Stays (moved into nearest eastern Community),Devils Lake,21,92,Minot
+58357,Oberon,ND,Benson,Minot,Stays (moved into nearest eastern Community),Devils Lake,20,98,Minot
+58385,Wolford,ND,Pierce,Minot,Stays (moved into nearest eastern Community),Devils Lake,44,77,Minot
+58386,York,ND,Benson,Minot,Stays (moved into nearest eastern Community),Devils Lake,36,79,Minot
+58422,Cathay,ND,Wells,Minot,Stays (moved into nearest eastern Community),Carrington,16,85,Bismarck
+58438,Fessenden,ND,Wells,Minot,Stays (moved into nearest eastern Community),Carrington,26,82,Bismarck
+57345,Highmore,SD,Hyde,Pierre,Cut,(cut),53,47,Pierre
+57420,Akaska,SD,Walworth,Pierre,Cut,(cut),81,64,Pierre
+57442,Gettysburg,SD,Potter,Pierre,Cut,(cut),86,49,Pierre
+57450,Hoven,SD,Potter,Pierre,Cut,(cut),68,64,Pierre
+57455,Lebanon,SD,Potter,Pierre,Cut,(cut),69,53,Pierre
+57472,Selby,SD,Walworth,Pierre,Cut,(cut),78,74,Pierre
+57473,Seneca,SD,Faulk,Pierre,Cut,(cut),59,61,Pierre
+57501,Pierre,SD,Hughes,Pierre,Cut,(cut),70,12,Pierre
+57520,Agar,SD,Sully,Pierre,Cut,(cut),82,34,Pierre
+57521,Belvidere,SD,Mellette,Pierre,Cut,(cut),93,57,Pierre
+57522,Blunt,SD,Hughes,Pierre,Cut,(cut),58,21,Pierre
+57531,Draper,SD,Jones,Pierre,Cut,(cut),59,28,Pierre
+57532,Fort Pierre,SD,Stanley,Pierre,Cut,(cut),72,11,Pierre
+57536,Harrold,SD,Hughes,Pierre,Cut,(cut),47,29,Pierre
+57537,Hayes,SD,Stanley,Pierre,Cut,(cut),102,39,Pierre
+57540,Holabird,SD,Hyde,Pierre,Cut,(cut),47,37,Pierre
+57543,Kadoka,SD,Jackson,Pierre,Cut,(cut),109,72,Pierre
+57547,Long Valley,SD,Jackson,Pierre,Cut,(cut),108,82,Pierre
+57551,Martin,SD,Bennett,Pierre,Cut,(cut),127,106,Pierre
+57552,Midland,SD,Haakon,Pierre,Cut,(cut),98,43,Pierre
+57553,Milesville,SD,Haakon,Pierre,Cut,(cut),124,64,Pierre
+57555,Mission,SD,Todd,Pierre,Cut,(cut),75,76,Pierre
+57559,Murdo,SD,Jones,Pierre,Cut,(cut),70,35,Pierre
+57560,Norris,SD,Mellette,Pierre,Cut,(cut),98,77,Pierre
+57562,Okaton,SD,Jones,Pierre,Cut,(cut),81,44,Pierre
+57563,Okreek,SD,Todd,Pierre,Cut,(cut),62,70,Pierre
+57564,Onida,SD,Sully,Pierre,Cut,(cut),72,30,Pierre
+57566,Parmelee,SD,Todd,Pierre,Cut,(cut),95,82,Pierre
+57567,Philip,SD,Haakon,Pierre,Cut,(cut),121,69,Pierre
+57568,Presho,SD,Lyman,Pierre,Cut,(cut),38,36,Pierre
+57570,Rosebud,SD,Todd,Pierre,Cut,(cut),87,82,Pierre
+57572,Saint Francis,SD,Todd,Pierre,Cut,(cut),100,94,Pierre
+57574,Tuthill,SD,Bennett,Pierre,Cut,(cut),113,101,Pierre
+57576,Vivian,SD,Lyman,Pierre,Cut,(cut),48,32,Pierre
+57577,Wanblee,SD,Jackson,Pierre,Cut,(cut),118,87,Pierre
+57579,White River,SD,Mellette,Pierre,Cut,(cut),75,59,Pierre
+57580,Winner,SD,Tripp,Pierre,Cut,(cut),51,76,Pierre
+57585,Wood,SD,Mellette,Pierre,Cut,(cut),56,56,Pierre
+57601,Mobridge,SD,Dewey,Pierre,Cut,(cut),98,69,Pierre
+57622,Cherry Creek,SD,Ziebach,Pierre,Cut,(cut),124,62,Pierre
+57623,Dupree,SD,Ziebach,Pierre,Cut,(cut),142,78,Pierre
+57625,Eagle Butte,SD,Dewey,Pierre,Cut,(cut),114,52,Pierre
+57626,Faith,SD,Perkins,Pierre,Cut,(cut),163,100,Pierre
+57630,Glencross,SD,Dewey,Pierre,Cut,(cut),117,74,Pierre
+57631,Glenham,SD,Walworth,Pierre,Cut,(cut),88,84,Pierre
+57633,Isabel,SD,Corson,Pierre,Cut,(cut),146,93,Pierre
+57636,Lantry,SD,Dewey,Pierre,Cut,(cut),134,71,Pierre
+57652,Ridgeview,SD,Dewey,Pierre,Cut,(cut),109,56,Pierre
+57656,Timber Lake,SD,Dewey,Pierre,Cut,(cut),127,82,Pierre
+57657,Trail City,SD,Corson,Pierre,Cut,(cut),111,82,Pierre
+57658,Wakpala,SD,Corson,Pierre,Cut,(cut),101,80,Bismarck
+57661,Whitehorse,SD,Dewey,Pierre,Cut,(cut),121,69,Pierre
+57701,Rapid City,SD,Pennington,Pierre,Cut,(cut),194,142,Pierre
+57702,Rapid City,SD,Pennington,Pierre,Cut,(cut),202,152,Pierre
+57703,Rapid City,SD,Pennington,Pierre,Cut,(cut),185,136,Pierre
+57706,Ellsworth Afb,SD,Meade,Pierre,Cut,(cut),189,137,Pierre
+57714,Allen,SD,Bennett,Pierre,Cut,(cut),134,106,Pierre
+57716,Batesland,SD,Oglala Lakota,Pierre,Cut,(cut),153,129,Pierre
+57718,Black Hawk,SD,Meade,Pierre,Cut,(cut),202,150,Pierre
+57719,Box Elder,SD,Meade,Pierre,Cut,(cut),184,131,Pierre
+57722,Buffalo Gap,SD,Oglala Lakota,Pierre,Cut,(cut),184,145,Pierre
+57725,Caputa,SD,Pennington,Pierre,Cut,(cut),173,125,Pierre
+57730,Custer,SD,Custer,Pierre,Cut,(cut),215,169,Pierre
+57732,Deadwood,SD,Lawrence,Pierre,Cut,(cut),216,163,Pierre
+57735,Edgemont,SD,Fall River,Pierre,Cut,(cut),229,190,Pierre
+57737,Enning,SD,Meade,Pierre,Cut,(cut),166,108,Pierre
+57738,Fairburn,SD,Custer,Pierre,Cut,(cut),190,146,Pierre
+57741,Fort Meade,SD,Meade,Pierre,Cut,(cut),210,154,Pierre
+57744,Hermosa,SD,Custer,Pierre,Cut,(cut),184,139,Pierre
+57745,Hill City,SD,Pennington,Pierre,Cut,(cut),222,172,Pierre
+57747,Hot Springs,SD,Fall River,Pierre,Cut,(cut),212,172,Pierre
+57748,Howes,SD,Meade,Pierre,Cut,(cut),143,83,Pierre
+57750,Interior,SD,Jackson,Pierre,Cut,(cut),132,95,Pierre
+57751,Keystone,SD,Pennington,Pierre,Cut,(cut),204,156,Pierre
+57752,Kyle,SD,Oglala Lakota,Pierre,Cut,(cut),146,113,Pierre
+57754,Lead,SD,Lawrence,Pierre,Cut,(cut),228,174,Pierre
+57756,Manderson,SD,Oglala Lakota,Pierre,Cut,(cut),162,132,Pierre
+57758,Mud Butte,SD,Meade,Pierre,Cut,(cut),188,126,Pierre
+57759,Nemo,SD,Lawrence,Pierre,Cut,(cut),212,159,Pierre
+57761,New Underwood,SD,Meade,Pierre,Cut,(cut),173,120,Pierre
+57763,Oelrichs,SD,Fall River,Pierre,Cut,(cut),202,168,Pierre
+57764,Oglala,SD,Oglala Lakota,Pierre,Cut,(cut),176,143,Pierre
+57766,Oral,SD,Fall River,Pierre,Cut,(cut),195,157,Pierre
+57767,Owanka,SD,Meade,Pierre,Cut,(cut),163,111,Pierre
+57769,Piedmont,SD,Meade,Pierre,Cut,(cut),199,146,Pierre
+57770,Pine Ridge,SD,Oglala Lakota,Pierre,Cut,(cut),173,144,Pierre
+57772,Porcupine,SD,Oglala Lakota,Pierre,Cut,(cut),161,124,Pierre
+57773,Pringle,SD,Custer,Pierre,Cut,(cut),213,170,Pierre
+57775,Quinn,SD,Pennington,Pierre,Cut,(cut),134,84,Pierre
+57780,Scenic,SD,Pennington,Pierre,Cut,(cut),156,112,Pierre
+57782,Smithwick,SD,Fall River,Pierre,Cut,(cut),197,161,Pierre
+57785,Sturgis,SD,Meade,Pierre,Cut,(cut),197,141,Pierre
+57787,Union Center,SD,Meade,Pierre,Cut,(cut),175,116,Pierre
+57788,Vale,SD,Butte,Pierre,Cut,(cut),200,142,Pierre
+57790,Wall,SD,Pennington,Pierre,Cut,(cut),145,94,Pierre
+57791,Wasta,SD,Meade,Pierre,Cut,(cut),159,105,Pierre
+57792,White Owl,SD,Meade,Pierre,Cut,(cut),160,100,Pierre
+57793,Whitewood,SD,Lawrence,Pierre,Cut,(cut),216,160,Pierre
+57794,Wounded Knee,SD,Oglala Lakota,Pierre,Cut,(cut),162,134,Pierre
+69201,Valentine,NE,Cherry,Pierre,Cut,(cut),100,116,Pierre
+69212,Crookston,NE,Cherry,Pierre,Cut,(cut),93,98,Pierre
+69216,Kilgore,NE,Cherry,Pierre,Cut,(cut),102,103,Pierre
+69337,Chadron,NE,Dawes,Pierre,Cut,(cut),195,168,Pierre
+82701,Newcastle,WY,Weston,Pierre,Cut,(cut),255,208,Pierre
+57339,Fort Thompson,SD,Buffalo,Pierre,Stays (moved into nearest eastern Community),Chamberlain,22,47,Pierre
+57346,Stephan,SD,Hyde,Pierre,Stays (moved into nearest eastern Community),Chamberlain,31,45,Pierre
+57365,Oacoma,SD,Lyman,Pierre,Stays (moved into nearest eastern Community),Chamberlain,4,60,Pierre
+57534,Hamill,SD,Tripp,Pierre,Stays (moved into nearest eastern Community),Chamberlain,23,65,Pierre
+57541,Ideal,SD,Tripp,Pierre,Stays (moved into nearest eastern Community),Chamberlain,32,57,Pierre
+57544,Kennebec,SD,Lyman,Pierre,Stays (moved into nearest eastern Community),Chamberlain,26,42,Pierre
+57548,Lower Brule,SD,Lyman,Pierre,Stays (moved into nearest eastern Community),Chamberlain,24,41,Pierre
+57569,Reliance,SD,Lyman,Pierre,Stays (moved into nearest eastern Community),Chamberlain,13,52,Pierre
+57584,Witten,SD,Tripp,Pierre,Stays (moved into nearest eastern Community),Chamberlain,43,62,Pierre
+58727,Columbus,ND,Burke,Williston,Cut,(cut),188,62,Williston
+58730,Crosby,ND,Divide,Williston,Cut,(cut),210,51,Williston
+58752,Lignite,ND,Burke,Williston,Cut,(cut),178,66,Williston
+58755,Mcgregor,ND,Williams,Williston,Cut,(cut),191,45,Williston
+58763,New Town,ND,Mountrail,Williston,Cut,(cut),165,49,Williston
+58765,Noonan,ND,Divide,Williston,Cut,(cut),198,57,Williston
+58772,Portal,ND,Burke,Williston,Cut,(cut),181,73,Williston
+58773,Powers Lake,ND,Burke,Williston,Cut,(cut),178,53,Williston
+58776,Ross,ND,Mountrail,Williston,Cut,(cut),171,47,Williston
+58794,White Earth,ND,Mountrail,Williston,Cut,(cut),178,40,Williston
+58795,Wildrose,ND,Divide,Williston,Cut,(cut),200,40,Williston
+58801,Williston,ND,Williams,Williston,Cut,(cut),222,9,Williston
+58830,Alamo,ND,Williams,Williston,Cut,(cut),214,32,Williston
+58831,Alexander,ND,McKenzie,Williston,Cut,(cut),213,21,Williston
+58833,Ambrose,ND,Divide,Williston,Cut,(cut),220,52,Williston
+58835,Arnegard,ND,McKenzie,Williston,Cut,(cut),203,30,Williston
+58838,Cartwright,ND,McKenzie,Williston,Cut,(cut),224,29,Williston
+58843,Epping,ND,Williams,Williston,Cut,(cut),205,12,Williston
+58844,Fortuna,ND,Divide,Williston,Cut,(cut),230,52,Williston
+58845,Grenora,ND,Williams,Williston,Cut,(cut),235,37,Williston
+58847,Keene,ND,McKenzie,Williston,Cut,(cut),178,38,Williston
+58849,Ray,ND,Williams,Williston,Cut,(cut),196,24,Williston
+58852,Tioga,ND,Williams,Williston,Cut,(cut),188,35,Williston
+58853,Trenton,ND,Williams,Williston,Cut,(cut),221,10,Williston
+58854,Watford City,ND,McKenzie,Williston,Cut,(cut),189,32,Williston
+58856,Zahl,ND,Williams,Williston,Cut,(cut),226,31,Williston
+59221,Fairview,MT,Richland,Williston,Cut,(cut),237,30,Williston
+59270,Sidney,MT,Richland,Williston,Cut,(cut),231,45,Williston
+59275,Westby,MT,Sheridan,Williston,Cut,(cut),249,56,Williston

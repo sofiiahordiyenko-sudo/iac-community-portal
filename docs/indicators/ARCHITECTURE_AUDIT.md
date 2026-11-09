@@ -400,8 +400,10 @@ true` (value came through a crosswalk), `derived: true` (composite).
 7. **ZCTA ≠ ZIP.** PO-box ZIPs have no ACS data; ZCTA definitions changed in
    2010 and 2020, so 2000/2010 values need a vintage crosswalk (NHGIS
    standardised tables RECOMMENDED).
-8. **121 ZIPs without an SC** and **29 SCs without ZIP lists** in the existing
-   masters.
+8. **121 ZIPs without an SC** and **30 SCs without ZIP lists** in the existing
+   masters. RESOLVED for the ZIPs: all 121 are assigned in Melissa's IAC
+   Community Report v7, now the ZIP master (`data/masters/`). The 30 SCs are
+   explained there too; build / merge / drop is John's decision.
 9. **Workbook vs CSV as source of truth.** RECOMMENDED: the CSV in the repo
    is canonical; the workbook remains the research working document and
    changes are copied in by the data-integration owner.
