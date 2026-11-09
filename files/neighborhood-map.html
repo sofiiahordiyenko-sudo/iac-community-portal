@@ -267,11 +267,10 @@
       <button id="ctrl-zoom-in" class="ctrl-btn" title="Zoom in">+</button>
       <button id="ctrl-zoom-out" class="ctrl-btn" title="Zoom out">−</button>
     </div>
-    <div class="ctrl-pair-caption">Back to</div>
-    <div class="ctrl-pair">
-      <a id="ctrl-lens-link" class="ctrl-btn-wide" href="#" title="Back to this Community's Lens page">LENS</a>
-      <a id="ctrl-iac-link" class="ctrl-btn-wide" href="../iac_map.html" title="Back to the IAC map">IAC</a>
-    </div>
+    <!-- One button, each way (John, 7 Nov): Community map -> IAC map here;
+         the IAC map has the matching button back, shown at Community scale. -->
+    <a id="ctrl-iac-toggle" class="ctrl-btn-wide" href="../iac_map.html?view=map"
+       title="Switch to the IAC map, centred on this Community">IAC Map ⇄</a>
     <div class="ctrl-pair-caption">Map style</div>
     <div class="ctrl-pair">
       <button id="ctrl-fill-toggle" class="ctrl-btn-wide" aria-pressed="false" title="Show community outlines only">Outline</button>
@@ -412,8 +411,9 @@ function registerMasterIndicators() {
 // ── VIEW STATISTICS structure ────────────────────────────────
 // [{ id, name, items: [{ key, label, enabled, reason }] }]
 // Built from the Indicator Master: the 7 Top-10 components in display order,
-// then "Population & Land" (the existing Lens views: Population Change,
-// Balance, Size, Dominant Landform). Every indicator of a component is listed
+// then Demographics (Population Change, Balance, Size) and Environment
+// (Dominant Landform), placed there per John (7 Nov) until those views move
+// to the Trend master. Every indicator of a component is listed
 // so the full structure is visible; ones without data are shown disabled.
 // Legacy views keep their original keys (income, pop_change, landform, …),
 // so ?indicator= / ?pop=1 deep links keep working.
@@ -423,10 +423,11 @@ const FALLBACK_STAT_GROUPS = [
     { key: 'poverty',      label: 'Poverty Rate',              enabled: true },
     { key: 'unemployment', label: 'Unemployment Rate',         enabled: true },
     { key: 'lfpr',         label: 'Labor Force Participation', enabled: true } ] },
-  { id: 'population_land', name: 'Population & Land', items: [
+  { id: 'demographics', name: 'Demographics', items: [
     { key: 'pop_change',  label: 'Population Change',  enabled: true },
     { key: 'pop_balance', label: 'Population Balance', enabled: true },
-    { key: 'pop_size',    label: 'Population Size',    enabled: true },
+    { key: 'pop_size',    label: 'Population Size',    enabled: true } ] },
+  { id: 'environment', name: 'Environment', items: [
     { key: 'landform',    label: 'Dominant Landform',  enabled: true } ] }
 ];
 
@@ -450,8 +451,7 @@ function buildStatGroups() {
         if (st) return { key: ind.id, label, enabled: st.enabled, reason: st.reason };
         return { key: ind.id, label, enabled: false, reason: ind.status === 'planned' ? 'planned' : 'data pending' };
       });
-    const name = comp.id === 'population_land' ? 'Population & Land' : comp.name;
-    return { id: comp.id, name, items };
+    return { id: comp.id, name: comp.name, items };
   }).filter(g => g.items.length > 0);
 }
 
@@ -798,7 +798,7 @@ function initMap(SC_DATA) {
   document.getElementById('ctrl-title').textContent = scShortName + ' — ' + modeLabel;
   document.getElementById('ctrl-zip-count').textContent =
     `${sc.zips.length} community area${sc.zips.length !== 1 ? 's' : ''}`;
-  document.getElementById('ctrl-lens-link').href = portalUrl;
+  document.getElementById('ctrl-iac-toggle').href = `../iac_map.html?view=map&scid=${scid}`;
   document.getElementById('ctrl-profile-link').href = `../community-profile.html?scid=${scid}&zip=${selectedZip}`;
   document.getElementById('ctrl-zoom-in').addEventListener('click', () => map.zoomIn());
   document.getElementById('ctrl-zoom-out').addEventListener('click', () => map.zoomOut());
