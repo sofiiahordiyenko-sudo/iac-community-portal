@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_at": "2026-10-07T11:08:49+00:00",
+ "generated_at": "2026-11-21T11:15:19+00:00",
  "generated_by": "scripts/build_indicators.py from data/indicators/*.csv - do not edit by hand",
  "components": [
   {
@@ -132,6 +132,150 @@
    "reliability_1to5": "UNKNOWN",
    "zip_availability": "High",
    "notes": "Provenance and scoring script not in repository. NEEDS CONFIRMATION (likely ACS 5-year 2024 and Decennial 2010/2020)."
+  },
+  "acs5_b19301": {
+   "source_name": "ACS 5-Year Estimates, Per Capita Income",
+   "publisher": "U.S. Census Bureau",
+   "dataset_or_table": "B19301",
+   "url": "https://api.census.gov/data/{year}/acs/acs5",
+   "native_geo_levels": "zcta;county;state",
+   "release_cycle": "Annual (December)",
+   "years_available": "2009-latest",
+   "reliability_1to5": "5",
+   "zip_availability": "High",
+   "notes": "ZCTA != USPS ZIP: PO-box ZIPs have no ACS data. Small-ZCTA estimates have large margins of error."
+  },
+  "acs5_b25106": {
+   "source_name": "ACS 5-Year Estimates, Tenure by Housing Costs as a Percentage of Household Income",
+   "publisher": "U.S. Census Bureau",
+   "dataset_or_table": "B25106",
+   "url": "https://api.census.gov/data/{year}/acs/acs5",
+   "native_geo_levels": "zcta;county;state",
+   "release_cycle": "Annual (December)",
+   "years_available": "2009-latest",
+   "reliability_1to5": "5",
+   "zip_availability": "High",
+   "notes": "ZCTA != USPS ZIP: PO-box ZIPs have no ACS data. Small-ZCTA estimates have large margins of error."
+  },
+  "acs5_b25077": {
+   "source_name": "ACS 5-Year Estimates, Median Value (Owner-Occupied Housing Units)",
+   "publisher": "U.S. Census Bureau",
+   "dataset_or_table": "B25077",
+   "url": "https://api.census.gov/data/{year}/acs/acs5",
+   "native_geo_levels": "zcta;county;state",
+   "release_cycle": "Annual (December)",
+   "years_available": "2009-latest",
+   "reliability_1to5": "5",
+   "zip_availability": "High",
+   "notes": "ZCTA != USPS ZIP: PO-box ZIPs have no ACS data. Small-ZCTA estimates have large margins of error. Suppressed where too few owner units."
+  },
+  "acs5_b25064": {
+   "source_name": "ACS 5-Year Estimates, Median Gross Rent",
+   "publisher": "U.S. Census Bureau",
+   "dataset_or_table": "B25064",
+   "url": "https://api.census.gov/data/{year}/acs/acs5",
+   "native_geo_levels": "zcta;county;state",
+   "release_cycle": "Annual (December)",
+   "years_available": "2009-latest",
+   "reliability_1to5": "5",
+   "zip_availability": "Moderate",
+   "notes": "ZCTA != USPS ZIP: PO-box ZIPs have no ACS data. Small-ZCTA estimates have large margins of error. Often suppressed in rural ZCTAs with few rental units."
+  },
+  "acs5_b28002": {
+   "source_name": "ACS 5-Year Estimates, Presence and Types of Internet Subscriptions in Household",
+   "publisher": "U.S. Census Bureau",
+   "dataset_or_table": "B28002",
+   "url": "https://api.census.gov/data/{year}/acs/acs5",
+   "native_geo_levels": "zcta;county;state",
+   "release_cycle": "Annual (December)",
+   "years_available": "2017-latest (ZCTA)",
+   "reliability_1to5": "5",
+   "zip_availability": "High",
+   "notes": "ZCTA != USPS ZIP: PO-box ZIPs have no ACS data. Small-ZCTA estimates have large margins of error."
+  },
+  "acs5_b08013": {
+   "source_name": "ACS 5-Year Estimates, Aggregate and Count of Travel Time to Work",
+   "publisher": "U.S. Census Bureau",
+   "dataset_or_table": "B08013;B08303",
+   "url": "https://api.census.gov/data/{year}/acs/acs5",
+   "native_geo_levels": "zcta;county;state",
+   "release_cycle": "Annual (December)",
+   "years_available": "2009-latest",
+   "reliability_1to5": "5",
+   "zip_availability": "High",
+   "notes": "ZCTA != USPS ZIP: PO-box ZIPs have no ACS data. Small-ZCTA estimates have large margins of error."
+  },
+  "cdc_places": {
+   "source_name": "CDC PLACES: Local Data for Better Health (ZCTA release)",
+   "publisher": "Centers for Disease Control and Prevention",
+   "dataset_or_table": "PLACES ZCTA data",
+   "url": "https://data.cdc.gov (PLACES: ZCTA Data)",
+   "native_geo_levels": "zcta;county",
+   "release_cycle": "Annual",
+   "years_available": "2020-latest (model-based; BRFSS)",
+   "reliability_1to5": "4",
+   "zip_availability": "High",
+   "notes": "Model-based small-area estimates, not direct survey counts. Measure definitions change between releases; check the release year."
+  },
+  "chr_life_expectancy": {
+   "source_name": "County Health Rankings & Roadmaps: Life Expectancy",
+   "publisher": "University of Wisconsin Population Health Institute (NCHS mortality data)",
+   "dataset_or_table": "CHR analytic data, Life Expectancy",
+   "url": "https://www.countyhealthrankings.org",
+   "native_geo_levels": "county",
+   "release_cycle": "Annual",
+   "years_available": "3-year pooled, 2010s-latest",
+   "reliability_1to5": "4",
+   "zip_availability": "Low",
+   "notes": "County only: allocate to ZIP with a county-to-ZIP crosswalk (e.g. HUD USPS ZIP crosswalk, residential ratio). Census-tract alternative: NCHS USALEEP (2010-2015 only)."
+  },
+  "fbi_cde": {
+   "source_name": "FBI Crime Data Explorer (UCR / NIBRS)",
+   "publisher": "Federal Bureau of Investigation",
+   "dataset_or_table": "Offenses known to law enforcement, by agency",
+   "url": "https://cde.ucr.cjis.gov",
+   "native_geo_levels": "county",
+   "release_cycle": "Annual",
+   "years_available": "1985-latest (NIBRS-only from 2021)",
+   "reliability_1to5": "3",
+   "zip_availability": "Low",
+   "notes": "Agency level; roll up to county and divide by population. Reporting gaps after the 2021 NIBRS switch: check agency participation before using a year."
+  },
+  "cdc_wonder_mortality": {
+   "source_name": "CDC WONDER Underlying Cause of Death (homicide, ICD-10 X85-Y09, U01-U02)",
+   "publisher": "Centers for Disease Control and Prevention",
+   "dataset_or_table": "Underlying Cause of Death",
+   "url": "https://wonder.cdc.gov",
+   "native_geo_levels": "county",
+   "release_cycle": "Annual",
+   "years_available": "1999-latest",
+   "reliability_1to5": "4",
+   "zip_availability": "Low",
+   "notes": "Counts under 10 are suppressed: pool 5 years and use the age-adjusted rate. County only; allocate to ZIP via crosswalk."
+  },
+  "fcc_bdc": {
+   "source_name": "FCC National Broadband Map (Broadband Data Collection)",
+   "publisher": "Federal Communications Commission",
+   "dataset_or_table": "Fixed availability, location level",
+   "url": "https://broadbandmap.fcc.gov",
+   "native_geo_levels": "zip;county",
+   "release_cycle": "Twice a year (June, December)",
+   "years_available": "2022-latest",
+   "reliability_1to5": "4",
+   "zip_availability": "High",
+   "notes": "Location-level: aggregate broadband-serviceable locations to ZIP. Exclude satellite (GSO/NGSO) when counting served locations."
+  },
+  "oi_social_capital_atlas": {
+   "source_name": "Social Capital Atlas (Chetty et al. 2022)",
+   "publisher": "Opportunity Insights",
+   "dataset_or_table": "Social capital by ZIP code and county",
+   "url": "https://socialcapital.org",
+   "native_geo_levels": "zip;county",
+   "release_cycle": "One-time (2022 release)",
+   "years_available": "2022",
+   "reliability_1to5": "4",
+   "zip_availability": "High",
+   "notes": "From Facebook friendship data. ZIP file has connectedness, cohesiveness (clustering, support ratio); civic engagement measures (volunteering rate, civic organizations) are county-level only."
   }
  },
  "indicators": [
@@ -184,7 +328,7 @@
     "rationale": null
    },
    "data": null,
-   "notes": "Scoring params inferred from existing scores (99.1% agreement); NEEDS CONFIRMATION"
+   "notes": "Base set (top 3 of component). Scoring params inferred from existing scores (99.1% agreement); NEEDS CONFIRMATION"
   },
   {
    "id": "eco_per_capita_income",
@@ -194,26 +338,36 @@
    "priority_rank": 2,
    "name": "Per Capita Income",
    "short_label": "Per Capita Income",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Total income of all residents divided by total population.",
+   "unit": "USD",
+   "value_type": "currency",
+   "direction": "higher_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "acs5_b19301",
+   "source_variables": "B19301_001E",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "ACS 5-year estimate at ZCTA level.",
+   "release_cycle": "Annual (ACS 5-year, December)",
+   "years_planned": [
+    2012,
+    2020,
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 20000.0,
+    "best": 60000.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Lowest income",
+    "Below average",
+    "",
+    "Above average",
+    "Highest income"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -229,7 +383,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "eco_poverty_rate",
@@ -280,7 +434,7 @@
     "rationale": null
    },
    "data": null,
-   "notes": "Scoring params inferred from existing scores (99.5% agreement); NEEDS CONFIRMATION"
+   "notes": "Base set (top 3 of component). Scoring params inferred from existing scores (99.5% agreement); NEEDS CONFIRMATION"
   },
   {
    "id": "eco_unemployment_rate",
@@ -615,26 +769,36 @@
    "priority_rank": 1,
    "name": "Housing Cost Burden",
    "short_label": "Housing Cost Burden",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Share of households spending 30% or more of household income on housing costs (owners and renters).",
+   "unit": "percent",
+   "value_type": "percent",
+   "direction": "lower_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "acs5_b25106",
+   "source_variables": "(B25106_006E+B25106_010E+B25106_014E+B25106_018E+B25106_022E+B25106_028E+B25106_032E+B25106_036E+B25106_040E+B25106_044E) / B25106_001E",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "ACS 5-year estimate at ZCTA level. Households with zero/negative income or no cash rent count in the denominator only.",
+   "release_cycle": "Annual (ACS 5-year, December)",
+   "years_planned": [
+    2012,
+    2020,
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 40.0,
+    "best": 10.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Highest burden",
+    "Above average",
+    "",
+    "Below average",
+    "Lowest burden"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -650,7 +814,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "inf_median_home_value",
@@ -660,26 +824,36 @@
    "priority_rank": 2,
    "name": "Median Home Value",
    "short_label": "Median Home Value",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Median value of owner-occupied housing units.",
+   "unit": "USD",
+   "value_type": "currency",
+   "direction": "higher_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "acs5_b25077",
+   "source_variables": "B25077_001E",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "ACS 5-year estimate at ZCTA level.",
+   "release_cycle": "Annual (ACS 5-year, December)",
+   "years_planned": [
+    2012,
+    2020,
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 75000.0,
+    "best": 350000.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Lowest value",
+    "Below average",
+    "",
+    "Above average",
+    "Highest value"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -695,7 +869,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "inf_median_gross_rent",
@@ -705,26 +879,36 @@
    "priority_rank": 3,
    "name": "Median Gross Rent",
    "short_label": "Median Gross Rent",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Median monthly gross rent (contract rent plus utilities) of renter-occupied units paying cash rent.",
+   "unit": "USD",
+   "value_type": "currency",
+   "direction": "neutral",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "acs5_b25064",
+   "source_variables": "B25064_001E",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "ACS 5-year estimate at ZCTA level. Often suppressed in rural ZCTAs.",
+   "release_cycle": "Annual (ACS 5-year, December)",
+   "years_planned": [
+    2012,
+    2020,
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 500.0,
+    "best": 1300.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Lowest rent",
+    "Below average",
+    "",
+    "Above average",
+    "Highest rent"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -740,7 +924,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "inf_homeownership_rate",
@@ -1110,7 +1294,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Do NOT substitute ACS 'HS diploma or higher (adults 25+)': that is attainment, Related but Different."
+   "notes": "Base set (top 3 of component). Do NOT substitute ACS 'HS diploma or higher (adults 25+)': that is attainment, Related but Different."
   },
   {
    "id": "edu_postsecondary_educational_attainment",
@@ -1165,7 +1349,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component)."
   },
   {
    "id": "edu_bachelors_degree_or_higher",
@@ -1220,7 +1404,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component)."
   },
   {
    "id": "edu_k_12_academic_proficiency",
@@ -1563,26 +1747,34 @@
    "priority_rank": 1,
    "name": "Life Expectancy",
    "short_label": "Life Expectancy",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Average number of years a person can expect to live at birth.",
+   "unit": "years",
+   "value_type": "ratio",
+   "direction": "higher_is_better",
    "geo_level": "zip",
-   "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "native_geo_level": "county",
+   "source_id": "chr_life_expectancy",
+   "source_variables": "Life expectancy (v147)",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "County value allocated to ZIPs through a county-to-ZIP crosswalk (crosswalks/county_to_zip.csv, still to be added).",
+   "release_cycle": "Annual",
+   "years_planned": [
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 74.0,
+    "best": 84.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Shortest life expectancy",
+    "Below average",
+    "",
+    "Above average",
+    "Longest life expectancy"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -1598,7 +1790,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "hhs_chronic_disease_prevalence",
@@ -1607,27 +1799,35 @@
    "component_id": "health_human_services",
    "priority_rank": 2,
    "name": "Chronic Disease Prevalence",
-   "short_label": "Chronic Disease Prevalence",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "short_label": "Chronic Disease",
+   "status": "defined",
+   "definition": "Mean crude prevalence among adults of four chronic conditions: diagnosed diabetes, coronary heart disease, COPD and current asthma.",
+   "unit": "percent",
+   "value_type": "percent",
+   "direction": "lower_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "cdc_places",
+   "source_variables": "mean(DIABETES, CHD, COPD, CASTHMA) crude prevalence",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "CDC PLACES ZCTA release, model-based estimates. Mean of the four measures.",
+   "release_cycle": "Annual",
+   "years_planned": [
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 14.0,
+    "best": 6.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Highest prevalence",
+    "Above average",
+    "",
+    "Below average",
+    "Lowest prevalence"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -1643,7 +1843,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "hhs_mental_health",
@@ -1652,27 +1852,35 @@
    "component_id": "health_human_services",
    "priority_rank": 3,
    "name": "Mental Health",
-   "short_label": "Mental Health",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "short_label": "Mental Distress",
+   "status": "defined",
+   "definition": "Share of adults reporting 14 or more days of poor mental health in the past 30 days (frequent mental distress).",
+   "unit": "percent",
+   "value_type": "percent",
+   "direction": "lower_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "cdc_places",
+   "source_variables": "MHLTH crude prevalence",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "CDC PLACES ZCTA release, model-based estimate.",
+   "release_cycle": "Annual",
+   "years_planned": [
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 22.0,
+    "best": 12.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Most distress",
+    "Above average",
+    "",
+    "Below average",
+    "Least distress"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -1688,7 +1896,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "hhs_self_reported_health",
@@ -2013,26 +2221,34 @@
    "priority_rank": 1,
    "name": "Violent Crime Rate",
    "short_label": "Violent Crime Rate",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Violent offenses (murder, rape, robbery, aggravated assault) per 100,000 residents.",
+   "unit": "per 100k",
+   "value_type": "ratio",
+   "direction": "lower_is_better",
    "geo_level": "zip",
-   "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "native_geo_level": "county",
+   "source_id": "fbi_cde",
+   "source_variables": "Violent crime offenses by agency, summed to county",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "Agency counts summed to county, divided by county population, 3-year average; allocated to ZIPs through the county-to-ZIP crosswalk.",
+   "release_cycle": "Annual",
+   "years_planned": [
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 600.0,
+    "best": 50.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Highest violent crime",
+    "Above average",
+    "",
+    "Below average",
+    "Lowest violent crime"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -2048,7 +2264,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "saf_property_crime_rate",
@@ -2058,26 +2274,34 @@
    "priority_rank": 2,
    "name": "Property Crime Rate",
    "short_label": "Property Crime Rate",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Property offenses (burglary, larceny-theft, motor vehicle theft) per 100,000 residents.",
+   "unit": "per 100k",
+   "value_type": "ratio",
+   "direction": "lower_is_better",
    "geo_level": "zip",
-   "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "native_geo_level": "county",
+   "source_id": "fbi_cde",
+   "source_variables": "Property crime offenses by agency, summed to county",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "Agency counts summed to county, divided by county population, 3-year average; allocated to ZIPs through the county-to-ZIP crosswalk.",
+   "release_cycle": "Annual",
+   "years_planned": [
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 3000.0,
+    "best": 500.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Highest property crime",
+    "Above average",
+    "",
+    "Below average",
+    "Lowest property crime"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -2093,7 +2317,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "saf_homicide_rate",
@@ -2103,26 +2327,34 @@
    "priority_rank": 3,
    "name": "Homicide Rate",
    "short_label": "Homicide Rate",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Age-adjusted homicide deaths per 100,000 residents.",
+   "unit": "per 100k",
+   "value_type": "ratio",
+   "direction": "lower_is_better",
    "geo_level": "zip",
-   "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "native_geo_level": "county",
+   "source_id": "cdc_wonder_mortality",
+   "source_variables": "ICD-10 X85-Y09, U01-U02, age-adjusted rate",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "5-year pooled county rate (counts under 10 suppressed); allocated to ZIPs through the county-to-ZIP crosswalk. Suppressed counties get no value, never 0.",
+   "release_cycle": "Annual",
+   "years_planned": [
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 8.0,
+    "best": 0.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Highest homicide rate",
+    "Above average",
+    "",
+    "Below average",
+    "Lowest homicide rate"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -2138,7 +2370,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "saf_traffic_fatality_rate",
@@ -2463,26 +2695,35 @@
    "priority_rank": 1,
    "name": "Broadband Adoption",
    "short_label": "Broadband Adoption",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Share of households with a broadband internet subscription of any type.",
+   "unit": "percent",
+   "value_type": "percent",
+   "direction": "higher_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "acs5_b28002",
+   "source_variables": "B28002_004E / B28002_001E",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "ACS 5-year estimate at ZCTA level.",
+   "release_cycle": "Annual (ACS 5-year, December)",
+   "years_planned": [
+    2020,
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 60.0,
+    "best": 95.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Lowest adoption",
+    "Below average",
+    "",
+    "Above average",
+    "Highest adoption"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -2498,7 +2739,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "con_high_speed_internet_availability",
@@ -2507,27 +2748,35 @@
    "component_id": "connectivity_access",
    "priority_rank": 2,
    "name": "High-Speed Internet Availability",
-   "short_label": "High-Speed Internet Availability",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "short_label": "High-Speed Internet",
+   "status": "defined",
+   "definition": "Share of broadband-serviceable locations with fixed (non-satellite) service of at least 100/20 Mbps available.",
+   "unit": "percent",
+   "value_type": "percent",
+   "direction": "higher_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "fcc_bdc",
+   "source_variables": "Locations served at >=100/20 Mbps, technologies excluding GSO/NGSO satellite / all BSLs",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "FCC location-level availability aggregated to ZIP.",
+   "release_cycle": "Twice a year",
+   "years_planned": [
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 40.0,
+    "best": 100.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Least available",
+    "Below average",
+    "",
+    "Above average",
+    "Most available"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -2543,7 +2792,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "con_average_commute_time",
@@ -2553,26 +2802,36 @@
    "priority_rank": 3,
    "name": "Average Commute Time",
    "short_label": "Average Commute Time",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Mean travel time to work, in minutes, for workers who do not work at home.",
+   "unit": "minutes",
+   "value_type": "ratio",
+   "direction": "lower_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "acs5_b08013",
+   "source_variables": "B08013_001E / B08303_001E",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "ACS 5-year estimate at ZCTA level.",
+   "release_cycle": "Annual (ACS 5-year, December)",
+   "years_planned": [
+    2012,
+    2020,
+    "latest"
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 35.0,
+    "best": 10.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Longest commutes",
+    "Above average",
+    "",
+    "Below average",
+    "Shortest commutes"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -2588,7 +2847,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "con_transportation_access",
@@ -2913,26 +3172,34 @@
    "priority_rank": 1,
    "name": "Social Connectedness",
    "short_label": "Social Connectedness",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Economic connectedness: share of high-income friends among low-income residents, relative to a fully integrated network (1 = equal).",
+   "unit": "ratio",
+   "value_type": "ratio",
+   "direction": "higher_is_better",
    "geo_level": "zip",
    "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "source_id": "oi_social_capital_atlas",
+   "source_variables": "ec_zip",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "Social Capital Atlas ZIP file. Alternative cohesiveness measures in the same file: clustering_zip, support_ratio_zip.",
+   "release_cycle": "One-time (2022)",
+   "years_planned": [
+    2022
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 0.5,
+    "best": 1.3,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Least connected",
+    "Below average",
+    "",
+    "Above average",
+    "Most connected"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -2948,7 +3215,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "ccq_volunteerism",
@@ -2958,26 +3225,34 @@
    "priority_rank": 2,
    "name": "Volunteerism",
    "short_label": "Volunteerism",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "status": "defined",
+   "definition": "Share of residents who are members of volunteering or activism groups.",
+   "unit": "percent",
+   "value_type": "percent",
+   "direction": "higher_is_better",
    "geo_level": "zip",
-   "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "native_geo_level": "county",
+   "source_id": "oi_social_capital_atlas",
+   "source_variables": "volunteering_rate_county x 100",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "Social Capital Atlas county file, allocated to ZIPs through the county-to-ZIP crosswalk. (The AmeriCorps CPS volunteering survey is state-level only, so it cannot be mapped.)",
+   "release_cycle": "One-time (2022)",
+   "years_planned": [
+    2022
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 3.0,
+    "best": 12.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Least volunteering",
+    "Below average",
+    "",
+    "Above average",
+    "Most volunteering"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -2993,7 +3268,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "ccq_civic_community_organization_participation",
@@ -3002,27 +3277,35 @@
    "component_id": "community_culture_qol",
    "priority_rank": 3,
    "name": "Civic / Community Organization Participation",
-   "short_label": "Civic / Community Organization Participation",
-   "status": "planned",
-   "definition": null,
-   "unit": null,
-   "value_type": null,
-   "direction": null,
+   "short_label": "Civic Organizations",
+   "status": "defined",
+   "definition": "Civic organizations (with a Facebook page) per 1,000 residents.",
+   "unit": "per 1,000",
+   "value_type": "ratio",
+   "direction": "higher_is_better",
    "geo_level": "zip",
-   "native_geo_level": "zip",
-   "source_id": null,
-   "source_variables": null,
+   "native_geo_level": "county",
+   "source_id": "oi_social_capital_atlas",
+   "source_variables": "civic_organizations_county",
    "derivation": null,
-   "methodology": null,
-   "release_cycle": null,
-   "years_planned": [],
+   "methodology": "Social Capital Atlas county file, allocated to ZIPs through the county-to-ZIP crosswalk.",
+   "release_cycle": "One-time (2022)",
+   "years_planned": [
+    2022
+   ],
    "scoring": {
-    "method": null,
-    "worst": null,
-    "best": null,
-    "status": null
+    "method": "linear_bands",
+    "worst": 5.0,
+    "best": 25.0,
+    "status": "provisional"
    },
-   "legend": null,
+   "legend": [
+    "Fewest organizations",
+    "Below average",
+    "",
+    "Above average",
+    "Most organizations"
+   ],
    "weight": null,
    "binding": {
     "type": "values_file",
@@ -3038,7 +3321,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": null
+   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "ccq_social_trust",

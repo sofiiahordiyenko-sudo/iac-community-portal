@@ -1,0 +1,1 @@
+{"schema_version":"1.0","component_id":"safety_governance","generated_at":"2026-11-21T11:15:19+00:00","indicators":{"saf_violent_crime_rate":{"geo_level":"zip","years":[],"latest_year":null,"values":{}},"saf_property_crime_rate":{"geo_level":"zip","years":[],"latest_year":null,"values":{}},"saf_homicide_rate":{"geo_level":"zip","years":[],"latest_year":null,"values":{}}}}

@@ -1,0 +1,11 @@
+zip_code,town,county,old_community,old_service_center,miles_to_old_hub,miles_to_new_ulm,ratio_after_move,floater_after_move
+56073,New Ulm,Brown,Mankato,Mankato,27.2,0,,No
+56030,Essig,Brown,Redwood Falls,Marshall,30.1,6.8,4.43,No
+56021,Courtland,Nicollet,"Mankato, MN",Mankato,19.7,7.8,2.52,No
+56054,Lafayette,Nicollet,"Mankato, MN",Mankato,28.6,10.1,2.83,No
+56041,Hanska,Brown,Mankato,Mankato,27,10.9,2.48,No
+56074,Nicollet,Nicollet,"Mankato, MN",Mankato,17.3,13.2,1.31,Yes
+56085,Sleepy Eye,Brown,Redwood Falls,Marshall,26,13.2,1.97,No
+56056,La Salle,Watonwan,Mankato,Mankato,30.1,17.1,1.76,No
+56062,Madelia,Watonwan,Mankato,Mankato,22.4,18.1,1.24,Yes
+55332,Fairfax,Renville,Redwood Falls,Marshall,21.4,18.7,1.15,Yes
