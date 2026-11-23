@@ -16,10 +16,21 @@ largest actual value across all ZIPs and interpolate between them:
 - `higher_is_better`: score = 1 + 9 × (max − value) / (max − min)
 - `lower_is_better`: score = 1 + 9 × (value − min) / (max − min)
 - Even a narrow spread (e.g. volunteerism from 3% to 5%) uses the full 1–10 scale.
+- **The ends are the 5th and 95th percentile**, not the single smallest and largest value; values beyond
+  them get 1.00 or 10.00. Tested on the map data (23 Nov): with pure min/max one tiny ZIP with 100%
+  unemployment puts 99% of all ZIPs in the best band, and 93% for poverty; with the 5th–95th percentile
+  they spread over all five bands. One setting switches back to pure min/max:
+  `SCORE_BOUNDS_PCT = (0, 100)` in `scripts/build_indicators.py`.
 
 In `indicator_master.csv` this is `scoring_method = minmax_interpolation` with `scoring_status = data_driven`;
 `score_worst` / `score_best` stay empty because the build script (`scripts/build_indicators.py`) takes
 min and max from the loaded values. The hand-set placeholder ranges of 21 Nov are removed.
+
+The same rule now applies to everything on the map: `scripts/rescore_legacy.py` re-scores the existing
+fields in `community_data.json` (income, poverty, unemployment, labor force participation, population
+change) and `files/service_centers.json`, and the map colours run from dark green (1.00–2.80, best) to dark
+red (8.21–10.00, worst). Population Balance and Population Size describe a place rather than rate it, so
+they keep their old 1–10 and are shown in neutral blues.
 
 "Better when" below is the only thing we set by hand: it decides which end of the data gets the 1.
 
@@ -52,18 +63,11 @@ Population Change, Population Balance, Population Size, Dominant Landform.
 
 ## Open points
 
-1. **Min-max or percentiles?** Asked John on 23 Nov whether to use the actual min and max, or e.g. the
-   5th and 95th percentile so that one outlier ZIP does not squeeze all the others into a narrow band.
-   We start with min and max.
+1. **Percentiles:** the map uses the 5th–95th percentile (see the scoring rule). To confirm with John.
 2. **Median Gross Rent has no direction.** It was `neutral`, but the 1 = best rule needs a direction, so it
    gets no score until we decide (lower = more affordable, or leave it as a plain value without a score).
    Median Home Value stays higher = better for now; affordability is covered by Housing Cost Burden.
-3. **The map still uses 10 = best.** The legacy scores in `community_data.json` (income, poverty,
-   unemployment, labor force, population change) and the colours in `files/neighborhood-map.html`
-   (`SCALE_COLORS`) are 1–10 with 10 = best and whole numbers. Before the new indicators go on the map,
-   the colour scale has to be flipped and handle 2 decimals, and the legacy scores re-scored the same way.
-   The three Education indicators and the two published Economy ones keep their old `linear_bands`
-   until then. To agree with John and Anastasia.
+3. **Done 23 Nov:** the map no longer uses 10 = best. Old scores re-scored, colours flipped, decimals handled.
 4. **County-level sources** (life expectancy, crime, homicide, volunteerism, civic organizations) need
    `data/indicators/crosswalks/county_to_zip.csv` (e.g. HUD USPS ZIP crosswalk, residential ratio). Until it
    exists the build warns and does not publish those values.

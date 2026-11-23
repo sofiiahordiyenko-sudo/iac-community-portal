@@ -101,13 +101,34 @@ def linear_band_score(x, worst, best):
     return max(1, min(10, int(math.floor(v + 0.5))))
 
 
+# Bounds for minmax_interpolation, as percentiles of the actual values.
+# John's rule (22 Nov 2026): interpolate between the smallest and the largest
+# value, 1 = best, 10 = worst, 2 decimals. Pure min/max (0, 100) lets one tiny
+# ZIP with 100% unemployment push 99% of all ZIPs into the same colour, so the
+# ends are taken at the 5th and 95th percentile and values beyond them are
+# clipped to 1 or 10 (asked John 23 Nov; set to (0, 100) for pure min/max).
+SCORE_BOUNDS_PCT = (5, 95)
+
+
+def percentile(xs, p):
+    xs = sorted(xs)
+    k = (len(xs) - 1) * p / 100
+    f = int(math.floor(k))
+    c = min(f + 1, len(xs) - 1)
+    return xs[f] + (xs[c] - xs[f]) * (k - f)
+
+
+def score_bounds(values, pct=None):
+    lo_p, hi_p = pct or SCORE_BOUNDS_PCT
+    return percentile(values, lo_p), percentile(values, hi_p)
+
+
 def minmax_score(x, lo, hi, direction):
-    """John, 22 Nov 2026: scales are set by the data. Interpolate between the
-    smallest and largest actual value of the indicator (per year, across all
-    published geographies). 1 is always the best, 10 the worst, 2 decimals.
-    The direction decides which end is best."""
+    """1 is always the best, 10 the worst, 2 decimals. The direction decides
+    which end is best; values outside [lo, hi] are clipped."""
     if hi == lo:
         return 1.0
+    x = min(max(x, lo), hi)
     if direction == "higher_is_better":
         v = 1 + 9 * (hi - x) / (hi - lo)
     else:  # lower_is_better
@@ -358,7 +379,7 @@ def main():
                                                      float(m["score_best"]))
         if m.get("scoring_method") == "minmax_interpolation" and geos:
             raws = [v["raw"] for v in geos.values()]
-            lo, hi = min(raws), max(raws)
+            lo, hi = score_bounds(raws)
             for g in geos:
                 geos[g]["score"] = minmax_score(geos[g]["raw"], lo, hi, m.get("direction"))
     for iid, gs in unknown.items():

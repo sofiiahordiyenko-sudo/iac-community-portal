@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_at": "2026-11-23T20:08:56+00:00",
+ "generated_at": "2026-11-23T20:10:21+00:00",
  "generated_by": "scripts/build_indicators.py from data/indicators/*.csv - do not edit by hand",
  "components": [
   {
@@ -310,10 +310,10 @@
     2024
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 38750.0,
-    "best": 153750.0,
-    "status": "legacy_inferred"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Lowest income",
@@ -416,10 +416,10 @@
     2024
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 40.5,
-    "best": 0.0,
-    "status": "legacy_inferred"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Highest poverty",
@@ -467,10 +467,10 @@
     2024
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 18.5,
-    "best": 0.0,
-    "status": "legacy_inferred"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Highest unemployment",
@@ -516,10 +516,10 @@
    "release_cycle": null,
    "years_planned": [],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 35.3,
-    "best": 79.9,
-    "status": "legacy_inferred"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Lowest participation",
@@ -1274,10 +1274,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 60.0,
-    "best": 100.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Lowest graduation rate",
@@ -1329,10 +1329,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 15.0,
-    "best": 65.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Lowest attainment",
@@ -1384,10 +1384,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 5.0,
-    "best": 50.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Lowest attainment",
@@ -3670,10 +3670,10 @@
     2020
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": -0.15,
-    "best": 0.15,
-    "status": "legacy_inferred"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Significant decline",
