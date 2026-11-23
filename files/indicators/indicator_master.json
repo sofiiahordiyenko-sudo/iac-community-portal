@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_at": "2026-11-21T11:15:19+00:00",
+ "generated_at": "2026-11-23T06:16:00+00:00",
  "generated_by": "scripts/build_indicators.py from data/indicators/*.csv - do not edit by hand",
  "components": [
   {
@@ -356,10 +356,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 20000.0,
-    "best": 60000.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Lowest income",
@@ -383,7 +383,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "eco_poverty_rate",
@@ -787,10 +787,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 40.0,
-    "best": 10.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Highest burden",
@@ -814,7 +814,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "inf_median_home_value",
@@ -842,10 +842,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 75000.0,
-    "best": 350000.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Lowest value",
@@ -869,7 +869,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "inf_median_gross_rent",
@@ -897,10 +897,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 500.0,
-    "best": 1300.0,
-    "status": "provisional"
+    "method": null,
+    "worst": null,
+    "best": null,
+    "status": "direction_open"
    },
    "legend": [
     "Lowest rent",
@@ -924,7 +924,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "inf_homeownership_rate",
@@ -1763,10 +1763,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 74.0,
-    "best": 84.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Shortest life expectancy",
@@ -1790,7 +1790,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "hhs_chronic_disease_prevalence",
@@ -1816,10 +1816,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 14.0,
-    "best": 6.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Highest prevalence",
@@ -1843,7 +1843,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "hhs_mental_health",
@@ -1869,10 +1869,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 22.0,
-    "best": 12.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Most distress",
@@ -1896,7 +1896,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "hhs_self_reported_health",
@@ -2237,10 +2237,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 600.0,
-    "best": 50.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Highest violent crime",
@@ -2264,7 +2264,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "saf_property_crime_rate",
@@ -2290,10 +2290,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 3000.0,
-    "best": 500.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Highest property crime",
@@ -2317,7 +2317,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "saf_homicide_rate",
@@ -2343,10 +2343,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 8.0,
-    "best": 0.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Highest homicide rate",
@@ -2370,7 +2370,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "saf_traffic_fatality_rate",
@@ -2712,10 +2712,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 60.0,
-    "best": 95.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Lowest adoption",
@@ -2739,7 +2739,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "con_high_speed_internet_availability",
@@ -2765,10 +2765,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 40.0,
-    "best": 100.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Least available",
@@ -2792,7 +2792,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "con_average_commute_time",
@@ -2820,10 +2820,10 @@
     "latest"
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 35.0,
-    "best": 10.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Longest commutes",
@@ -2847,7 +2847,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "con_transportation_access",
@@ -3188,10 +3188,10 @@
     2022
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 0.5,
-    "best": 1.3,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Least connected",
@@ -3215,7 +3215,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "ccq_volunteerism",
@@ -3241,10 +3241,10 @@
     2022
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 3.0,
-    "best": 12.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Least volunteering",
@@ -3268,7 +3268,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "ccq_civic_community_organization_participation",
@@ -3294,10 +3294,10 @@
     2022
    ],
    "scoring": {
-    "method": "linear_bands",
-    "worst": 5.0,
-    "best": 25.0,
-    "status": "provisional"
+    "method": "minmax_interpolation",
+    "worst": null,
+    "best": null,
+    "status": "data_driven"
    },
    "legend": [
     "Fewest organizations",
@@ -3321,7 +3321,7 @@
     "latest_year": null,
     "geo_count_latest": 0
    },
-   "notes": "Base set (top 3 of component). Placeholder bands, set by hand for the base set (21 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
+   "notes": "Base set (top 3 of component). Scored from the data: min-max interpolation, 1 = best, 10 = worst, 2 decimals (John, 22 Nov 2026): recalibrate to the 5th-95th percentile of the first data load."
   },
   {
    "id": "ccq_social_trust",

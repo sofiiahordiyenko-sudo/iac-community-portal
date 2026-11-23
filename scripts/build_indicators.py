@@ -51,7 +51,7 @@ LEVELS = {"indicator", "measure"}
 STATUSES = {"planned", "researching", "defined", "validated", "published"}
 DIRECTIONS = {"higher_is_better", "lower_is_better", "neutral", ""}
 BINDINGS = {"values_file", "legacy_zip_field", "legacy_sc_field"}
-SCORING = {"linear_bands", "categorical", "UNKNOWN", ""}
+SCORING = {"linear_bands", "minmax_interpolation", "categorical", "UNKNOWN", ""}
 GEO_LEVELS = {"zip", "service_center", "school_district", "county"}
 PUBLISHED_GEO_LEVELS = {"zip", "service_center"}   # what the Lens map can draw
 DERIVATIONS = {"", "mean_of_measures"}
@@ -99,6 +99,20 @@ def linear_band_score(x, worst, best):
     tails clipped. Works for both directions because worst/best carry it."""
     v = 1 + 9 * (x - worst) / (best - worst)
     return max(1, min(10, int(math.floor(v + 0.5))))
+
+
+def minmax_score(x, lo, hi, direction):
+    """John, 22 Nov 2026: scales are set by the data. Interpolate between the
+    smallest and largest actual value of the indicator (per year, across all
+    published geographies). 1 is always the best, 10 the worst, 2 decimals.
+    The direction decides which end is best."""
+    if hi == lo:
+        return 1.0
+    if direction == "higher_is_better":
+        v = 1 + 9 * (hi - x) / (hi - lo)
+    else:  # lower_is_better
+        v = 1 + 9 * (x - lo) / (hi - lo)
+    return round(v, 2)
 
 
 def norm_geo_id(level, gid):
@@ -160,6 +174,9 @@ def load_master(log):
                 log.error(f"{where}: higher_is_better but score_best < score_worst")
             elif r.get("direction") == "lower_is_better" and b > w:
                 log.error(f"{where}: lower_is_better but score_best > score_worst")
+        if sm == "minmax_interpolation" and r.get("direction") not in ("higher_is_better", "lower_is_better"):
+            log.error(f"{where}: minmax_interpolation needs direction higher_is_better or lower_is_better "
+                      f"(1 must always be the best)")
         if r.get("level") == "indicator" and r.get("status") in ("defined", "validated", "published") \
                 and r.get("scoring_method") == "linear_bands":
             if not all(r.get(k) for k in ("legend_1", "legend_2", "legend_4", "legend_5")):
@@ -339,6 +356,11 @@ def main():
             if m.get("scoring_method") == "linear_bands":
                 geos[g]["score"] = linear_band_score(geos[g]["raw"], float(m["score_worst"]),
                                                      float(m["score_best"]))
+        if m.get("scoring_method") == "minmax_interpolation" and geos:
+            raws = [v["raw"] for v in geos.values()]
+            lo, hi = min(raws), max(raws)
+            for g in geos:
+                geos[g]["score"] = minmax_score(geos[g]["raw"], lo, hi, m.get("direction"))
     for iid, gs in unknown.items():
         log.warn(f"{iid}: {len(gs)} geographies not in community_data.json / service_centers.json "
                  f"were skipped (e.g. {sorted(gs)[:5]})")
