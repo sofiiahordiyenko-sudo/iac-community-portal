@@ -6,4 +6,5 @@ health_human_services,Health & Human Services,4,yes,,
 safety_governance,Safety & Governance,5,yes,,
 connectivity_access,Connectivity & Access,6,yes,,
 community_culture_qol,"Community, Culture & Quality of Life",7,yes,,
-population_land,Population & Land (existing Lens views),8,no,,Holds existing Population/Landform Lens views; placement NEEDS CONFIRMATION
+demographics,Demographics,8,no,,"Temporary home for the existing Lens views (John, 7 Nov 2026); will move to the Trend master"
+environment,Environment,9,no,,"Temporary home for the existing Lens views (John, 7 Nov 2026); will move to the Trend master"

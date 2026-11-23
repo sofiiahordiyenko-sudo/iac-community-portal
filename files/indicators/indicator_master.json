@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_at": "2026-11-23T06:16:00+00:00",
+ "generated_at": "2026-11-23T20:08:56+00:00",
  "generated_by": "scripts/build_indicators.py from data/indicators/*.csv - do not edit by hand",
  "components": [
   {
@@ -53,9 +53,16 @@
    "weight": null
   },
   {
-   "id": "population_land",
-   "name": "Population & Land (existing Lens views)",
+   "id": "demographics",
+   "name": "Demographics",
    "display_order": 8,
+   "in_top10_structure": false,
+   "weight": null
+  },
+  {
+   "id": "environment",
+   "name": "Environment",
+   "display_order": 9,
    "in_top10_structure": false,
    "weight": null
   }
@@ -3642,7 +3649,7 @@
    "id": "pop_population_change",
    "level": "indicator",
    "parent_id": null,
-   "component_id": "population_land",
+   "component_id": "demographics",
    "priority_rank": 1,
    "name": "Population Change",
    "short_label": "Population Change",
@@ -3688,13 +3695,13 @@
     "rationale": null
    },
    "data": null,
-   "notes": "Also exists at SC level in service_centers.json; scoring params inferred (98.9% agreement)"
+   "notes": "Also exists at SC level in service_centers.json; scoring params inferred (98.9% agreement). Moved from population_land per John (7 Nov 2026)."
   },
   {
    "id": "pop_population_balance",
    "level": "indicator",
    "parent_id": null,
-   "component_id": "population_land",
+   "component_id": "demographics",
    "priority_rank": 2,
    "name": "Population Balance",
    "short_label": "Population Balance",
@@ -3737,13 +3744,13 @@
     "rationale": null
    },
    "data": null,
-   "notes": "Community-level (one score per Service Center)"
+   "notes": "Community-level (one score per Service Center). Moved from population_land per John (7 Nov 2026)."
   },
   {
    "id": "pop_population_size",
    "level": "indicator",
    "parent_id": null,
-   "component_id": "population_land",
+   "component_id": "demographics",
    "priority_rank": 3,
    "name": "Population Size",
    "short_label": "Population Size",
@@ -3786,14 +3793,14 @@
     "rationale": null
    },
    "data": null,
-   "notes": "Community-level (one score per Service Center)"
+   "notes": "Community-level (one score per Service Center). Moved from population_land per John (7 Nov 2026)."
   },
   {
    "id": "pop_dominant_landform",
    "level": "indicator",
    "parent_id": null,
-   "component_id": "population_land",
-   "priority_rank": 4,
+   "component_id": "environment",
+   "priority_rank": 1,
    "name": "Dominant Landform",
    "short_label": "Dominant Landform",
    "status": "published",
@@ -3829,7 +3836,7 @@
     "rationale": null
    },
    "data": null,
-   "notes": "Categorical; colored by LANDFORM_COLORS in neighborhood-map.html"
+   "notes": "Categorical; colored by LANDFORM_COLORS in neighborhood-map.html. Moved from population_land per John (7 Nov 2026)."
   },
   {
    "id": "edu_k12_ela_proficiency",

@@ -277,6 +277,11 @@
           <button class="legend-zoom-btn" onclick="map.zoomIn()" title="Zoom in">+</button>
           <button class="legend-zoom-btn" onclick="map.zoomOut()" title="Zoom out">−</button>
         </div>
+        <!-- One-button toggle IAC map <-> Community map (John, 7 Nov). Depends
+             on display scale: zoomed in, it opens the Community nearest the
+             map centre; zoomed out, it asks you to zoom in. -->
+        <button id="community-toggle-btn" class="legend-new-search-btn" style="background:#2e7d4f;" disabled
+                title="Zoom in to a Community to open its map">Zoom in for Community Map</button>
         <a id="access-community-btn" class="legend-new-search-btn" style="display:none; box-sizing:border-box; text-align:center; text-decoration:none; background:#1e88e5;" href="#">Access Community Page →</a>
         <a class="legend-new-search-btn" style="display:block; box-sizing:border-box; text-align:center; text-decoration:none;" href="community-profile.html?scid=all">IAC Profile Page</a>
         <button class="legend-new-search-btn" onclick="goBack()">← New Search</button>
@@ -523,6 +528,37 @@ function updateTownLabels() {
 map.on('zoomend', updateTownLabels);
 updateTownLabels();
 
+// ── COMMUNITY MAP TOGGLE (scale-based) ──
+// At Community scale (zoom >= TOWN_LABEL_ZOOM) the button opens the
+// Community map for the Service Center nearest the map centre; further out
+// it is disabled, because at that scale there is no single Community in view.
+let toggleTarget = null;
+function updateCommunityToggle() {
+  const btn = document.getElementById('community-toggle-btn');
+  if (!btn) return;
+  const c = map.getCenter();
+  toggleTarget = map.getZoom() >= TOWN_LABEL_ZOOM ? nearestServiceCenter(c.lat, c.lng) : null;
+  if (toggleTarget) {
+    const town = toggleTarget.sc.anchor_town || toggleTarget.sc.name.replace(' Service Center', '');
+    btn.textContent = 'Community Map: ' + town + ' ⇄';
+    btn.title = 'Switch to the ' + toggleTarget.sc.name + ' Community map';
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  } else {
+    btn.textContent = 'Zoom in for Community Map';
+    btn.title = 'Zoom in to a Community to open its map';
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+  }
+}
+document.getElementById('community-toggle-btn').addEventListener('click', function() {
+  if (!toggleTarget) return;
+  window.location.href = 'files/neighborhood-map.html?scid=' + toggleTarget.scid +
+    '&zip=' + toggleTarget.sc.anchor_zip + '&view=neighborhood';
+});
+map.on('moveend', updateCommunityToggle);
+updateCommunityToggle();
+
 // ── SEARCH MARKER ──
 let searchMarker = null;
 let highlightedScid = null;
@@ -743,11 +779,24 @@ loadTownIndex().catch(() => null);
 // straight into the full map with every Service Center visible, skipping
 // the search-first welcome screen — the welcome screen still exists for
 // direct/search-first entry, and "← New Search" goes back to it.
-if (new URLSearchParams(window.location.search).get('view') === 'map') {
+const startParams = new URLSearchParams(window.location.search);
+if (startParams.get('view') === 'map') {
   document.getElementById('screen-welcome').style.display = 'none';
   const mapScreen = document.getElementById('screen-map');
   mapScreen.classList.add('visible');
-  setTimeout(() => map.invalidateSize(), 100);
+  setTimeout(() => {
+    map.invalidateSize();
+    // Coming from a Community map's "IAC Map" toggle: open at regional scale
+    // around that Community and highlight it, so the switch keeps your place.
+    const fromScid = startParams.get('scid');
+    if (fromScid && SC_LOCATIONS[fromScid]) {
+      const sc = SC_LOCATIONS[fromScid];
+      map.setView([sc.lat, sc.lng], 7, { animate: false });
+      highlightedScid = fromScid;
+      scMarkers[fromScid].setStyle({ fillColor: '#16a34a', radius: 12, weight: 3, color: '#fff' });
+      updateCommunityToggle();
+    }
+  }, 100);
 }
 </script>
 </body>

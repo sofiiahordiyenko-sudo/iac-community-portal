@@ -160,7 +160,7 @@ views are not in the 70.
 
 | Excel field | Example | Target field | Target table | Transformation | Notes |
 |---|---|---|---|---|---|
-| Component | Education | `component_id`, `component_name` | `components.csv`, `indicator_master.csv` | name → stable id (`education`) | 8th group `population_land` holds existing Lens views — NEEDS CONFIRMATION |
+| Component | Education | `component_id`, `component_name` | `components.csv`, `indicator_master.csv` | name → stable id (`education`) | existing Lens views sit in `demographics` and `environment` (John, 7 Nov 2026) |
 | Priority Rank | 3 | `priority_rank` | `indicator_master.csv` | int | Orders selector entries; **not** a weight |
 | Top 10 Indicator | Bachelor's Degree or Higher | `indicator_name`; `indicator_id` | `indicator_master.csv` | id = component prefix + slug (`edu_bachelors_degree_or_higher`) | ids are permanent; names may change |
 | Existing Materials – Match/Overlap | (empty) | `existing_materials_match` | `indicator_master.csv` | copied; filled for the 8 existing fields | |
@@ -345,7 +345,7 @@ true` (value came through a crosswalk), `derived: true` (composite).
 
 | File | Purpose |
 |---|---|
-| `data/indicators/components.csv` | 7 components + `population_land` group |
+| `data/indicators/components.csv` | 7 components + `demographics` and `environment` |
 | `data/indicators/indicator_master.csv` | 70 workbook indicators + 4 existing Lens views + 2 K-12 measures (76 rows) |
 | `data/indicators/sources.csv` | 6 sources (ACS B15003, state ACGR, state assessments, attendance, NCES CCD, legacy) |
 | `data/indicators/research/education.csv` | Empty research table for researcher-supplied Education data |
@@ -395,8 +395,10 @@ true` (value came through a crosswalk), `derived: true` (composite).
    review. Legacy band parameters are inferred.
 5. **Provenance of existing values/scores** (year of LFPR, scoring script) is
    UNKNOWN.
-6. **Population & Landform** are not among the 7 components; placed in
-   `population_land` pending a decision.
+6. **Population & Landform** are not among the 7 components. DECIDED (John,
+   7 Nov 2026): Population Change / Balance / Size go to a Demographics
+   component, Dominant Landform to Environment, for now; all of these views
+   will later be redirected to the Trend master.
 7. **ZCTA ≠ ZIP.** PO-box ZIPs have no ACS data; ZCTA definitions changed in
    2010 and 2020, so 2000/2010 values need a vintage crosswalk (NHGIS
    standardised tables RECOMMENDED).
